@@ -1,3 +1,4 @@
+// (C) Poltorashka, Inc.
 #include <TXlib.h>
 
 

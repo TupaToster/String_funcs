@@ -1,3 +1,4 @@
+// (C) Poltorashka, Inc.
 /*!
 	\file
 	A file to store basic string functions (for now at least)
@@ -27,32 +28,53 @@ unsigned int string_size (const char* str) {
 	\return OK - string read, all ok
 	\return MEM_LIM - program ran out of free memory
 
-Also dynamically changes string's size to match the input
-*/
-input_status my_getline (char** str) {
-
-    assert (str != NULL);
+Also dynamically changes string's size to match the input                    
+*/                                                                           
+input_status my_getline (char** str) {                                       
 	
-	unsigned int       iter = 0;
-	unsigned int sizeof_str = string_size (*str);
-	int             in_char = fgetc (stdin);
+	assert ( str != NULL);
+	assert (*str != NULL);	      
 
-	while (in_char != '\n' and in_char != EOF) {
+	unsigned int iter 	  = 0;
+	int char_in 		  = fgetc(stdin);
+	unsigned int str_size = string_size(*str);
 	
-		if (sizof_str == iter) {
-			
-			sizeof_str *= 2;
-			*str = realloc (*str, sizeof_str);
-			if (*str == NULL){
-				printf("Your pc happened to run out of free memory \n");
-				return MEM_LIM;
-			}							
-		}
+	while (char_in != '\n' and char_in != EOF) {
 		
-	    *str[iter] = in_char;
+		if (iter == str_size) {
+			
+			str_size *= 2;                  
+			*str = (char*) realloc(*str, str_size);
+			if (*str == NULL){
+				//printf("Segmentation fault\n");
+				return MEM_LIM;
+			}		
+		}
+		(*str)[iter] = (char) char_in;
 		iter++;
-	}		
-	
-	*str[iter] = '\0';
+		char_in = fgetc (stdin);
+	}
+	str_size = iter+1;
+	*str = (char*) realloc (*str, str_size);
+	if (*str == NULL) {
+		//printf("Segmentation fault\n");
+		return MEM_LIM;
+	}
+	str[iter] = '\0';
 	return OK;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
