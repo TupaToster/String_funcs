@@ -11,3 +11,5 @@ enum input_status {
 input_status my_getline (char** string_to_input_to);
 
 unsigned int string_size (const char* string_to_measure);
+
+void unit_test ();
