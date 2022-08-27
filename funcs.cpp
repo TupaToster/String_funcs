@@ -3,7 +3,7 @@
 	A file to store basic string functions (for now at least)
 */
 
-#include <protos.h>
+#include "protos.h"
 
 
 /*!
