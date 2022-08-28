@@ -3,14 +3,18 @@
 
 void unit_test () {
 	
-	ungetc ('a', stdin);
-	ungetc ('b', stdin);
-	ungetc ('c', stdin);
-	ungetc ('\n', stdin);
-	char* s = (char*) malloc(1);
-	assert (s != NULL);
-	my_getline(&s);
-	printf("%s", s);
-	//if (strcmp("cba", s)) printf("Something wrong in my_getline \n");
-	
-}             
+    // Test of my_getline() function
+    FILE* test_input = NULL;
+    test_input = fopen ("test_input.txt", "r");
+    assert (test_input != NULL);
+    
+    char* test_str = (char*) malloc (4);
+
+    my_getline (&test_str, test_input);
+    
+    printf("%s", test_str);
+    ASRT (strcmp (test_str, "abc") == 0);
+    ASRT (strlen (test_str) == 3);
+    //EOTest
+    
+}

@@ -13,8 +13,7 @@ int main (int argc, char* argv[]){
 	char* s = NULL;
 	s = (char*) malloc (1);
 	if (s == NULL) return -1;	
-
-	if (my_getline (&s) == MEM_ERR) return -1;
+	if (my_getline (&s, stdin) == MEM_ERR) return -1;
 
 	printf("%s", s);
 }	
