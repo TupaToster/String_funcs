@@ -30,7 +30,7 @@ unsigned int string_size (const char* str) {
 
 Also dynamically changes string's size to match the input                    
 */                                                                           
-input_status my_getline (char** str) {                                       
+action_status my_getline (char** str) {                                       
 	
 	assert ( str != NULL);
 	assert (*str != NULL);	      
