@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_protos_8h" xml:lang="en-US">
+<title>protos.h File Reference</title>
+<indexterm><primary>protos.h</primary></indexterm>
+<programlisting>#include &lt;TXlib.h&gt;
+</programlisting><simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> { <link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</link> = 1
+, <link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e">MEM_ERR</link> = 0
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> <link linkend="_protos_8h_1a52358b4b8986c13631a49fc88781d785">my_getline</link> (char **string_to_input_to)</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_protos_8h_1a0ae04bf060cf734b5085462f3100a4f5">string_size</link> (const char *string_to_measure)</para>
+
+<para>Calculates string&apos;s size. </para>
+</listitem>
+            <listitem><para><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> <link linkend="_protos_8h_1a5c894b4b060ffad704a413ad2af95c21">my_strncpy</link> (char **from, char **to, unsigned int n)</para>
+</listitem>
+            <listitem><para><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> <link linkend="_protos_8h_1ac5978683c9855b9b6c4702feedc9dd1c">my_strcpy</link> (char *from, char *to)</para>
+
+<para>A simply strcpy function. </para>
+</listitem>
+            <listitem><para><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> <link linkend="_protos_8h_1a8b76fadf2f75632d4bc3a8d29a80a7e0">my_smart_strcpy</link> (char **from, char **to)</para>
+</listitem>
+            <listitem><para>void <link linkend="_protos_8h_1a8e55f3e436b0268b26875038536f8e53">unit_test</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00"/>    <section>
+    <title>action_status</title>
+<indexterm><primary>action_status</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>action_status</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>OK</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>OK</secondary></indexterm>
+<anchor xml:id="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59"/>OK</entry><entry></entry></row><row><entry><indexterm><primary>MEM_ERR</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>MEM_ERR</secondary></indexterm>
+<anchor xml:id="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e"/>MEM_ERR</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_protos_8h_1a52358b4b8986c13631a49fc88781d785"/>    <section>
+    <title>my_getline()</title>
+<indexterm><primary>my_getline</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>my_getline</secondary></indexterm>
+<para><computeroutput><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> my_getline (char ** str)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Reads line from stdin
+\param str - pointer to string&apos;s first element
+\return OK - string read, all ok
+\return MEM_LIM - program ran out of free memory
+</computeroutput></literallayout> Also dynamically changes string&apos;s size to match the input 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_protos_8h_1a8b76fadf2f75632d4bc3a8d29a80a7e0"/>    <section>
+    <title>my_smart_strcpy()</title>
+<indexterm><primary>my_smart_strcpy</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>my_smart_strcpy</secondary></indexterm>
+<para><computeroutput><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> my_smart_strcpy (char ** from, char ** to)</computeroutput></para>    </section><anchor xml:id="_protos_8h_1ac5978683c9855b9b6c4702feedc9dd1c"/>    <section>
+    <title>my_strcpy()</title>
+<indexterm><primary>my_strcpy</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>my_strcpy</secondary></indexterm>
+<para><computeroutput><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> my_strcpy (char * from, char * to)</computeroutput></para><para>
+
+<para>A simply strcpy function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>char*</entry>
+                                <entry>
+<para>from - string to copy from </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>char*</entry>
+                                <entry>
+<para>to - string to copy to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>OK in all cases except when MEM_LIM </para>
+
+<para>MEM_ERR if one of the pointers is NULL</para>
+</formalpara>
+A simple function that copies c-string from to c-string to without minding the sizes of both Actually may cause segmentation fault if used wrong </para>
+    </section><anchor xml:id="_protos_8h_1a5c894b4b060ffad704a413ad2af95c21"/>    <section>
+    <title>my_strncpy()</title>
+<indexterm><primary>my_strncpy</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>my_strncpy</secondary></indexterm>
+<para><computeroutput><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> my_strncpy (char ** from, char ** to, unsigned int n)</computeroutput></para>    </section><anchor xml:id="_protos_8h_1a0ae04bf060cf734b5085462f3100a4f5"/>    <section>
+    <title>string_size()</title>
+<indexterm><primary>string_size</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>string_size</secondary></indexterm>
+<para><computeroutput>unsigned int string_size (const char * str)</computeroutput></para><para>
+
+<para>Calculates string&apos;s size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>str</entry>
+                                <entry>
+<para>- pointer to string&apos;s first element </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Full string size including &apos;\0&apos; </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_protos_8h_1a8e55f3e436b0268b26875038536f8e53"/>    <section>
+    <title>unit_test()</title>
+<indexterm><primary>unit_test</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>unit_test</secondary></indexterm>
+<para><computeroutput>void unit_test ( )</computeroutput></para></section>
+</section>
+</section>

@@ -15,6 +15,7 @@
 unsigned int string_size (const char* str) {
 
 	assert (str != NULL);
+
 	
 	unsigned int size = 1;
 	for (size = 1; str[size] != '\0'; size++);
@@ -47,7 +48,7 @@ action_status my_getline (char** str) {
 			*str = (char*) realloc(*str, str_size);
 			if (*str == NULL){
 				//printf("Segmentation fault\n");
-				return MEM_LIM;
+				return MEM_ERR;
 			}		
 		}
 		(*str)[iter] = (char) char_in;
@@ -58,7 +59,7 @@ action_status my_getline (char** str) {
 	*str = (char*) realloc (*str, str_size);
 	if (*str == NULL) {
 		//printf("Segmentation fault\n");
-		return MEM_LIM;
+		return MEM_ERR;
 	}
 	str[iter] = '\0';
 	return OK;

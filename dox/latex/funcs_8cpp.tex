@@ -1,0 +1,46 @@
+\hypertarget{funcs_8cpp}{}\doxysection{funcs.\+cpp File Reference}
+\label{funcs_8cpp}\index{funcs.cpp@{funcs.cpp}}
+{\ttfamily \#include \char`\"{}protos.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{funcs_8cpp_a3dcf01851a2dc2905cf202dae9d1e7fa}{string\+\_\+size}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Calculates string\textquotesingle{}s size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} \mbox{\hyperlink{funcs_8cpp_a0fe7a7d65fbf49b4ebb51716ef05168e}{my\+\_\+getline}} (char $\ast$$\ast$str)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A file to store basic string functions (for now at least) 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{funcs_8cpp_a0fe7a7d65fbf49b4ebb51716ef05168e}\label{funcs_8cpp_a0fe7a7d65fbf49b4ebb51716ef05168e}} 
+\index{funcs.cpp@{funcs.cpp}!my\_getline@{my\_getline}}
+\index{my\_getline@{my\_getline}!funcs.cpp@{funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{my\_getline()}{my\_getline()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} my\+\_\+getline (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{str }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Reads line from stdin
+\param str - pointer to string's first element
+\return OK - string read, all ok
+\return MEM_LIM - program ran out of free memory
+\end{DoxyVerb}
+ Also dynamically changes string\textquotesingle{}s size to match the input ~\newline
+ \mbox{\Hypertarget{funcs_8cpp_a3dcf01851a2dc2905cf202dae9d1e7fa}\label{funcs_8cpp_a3dcf01851a2dc2905cf202dae9d1e7fa}} 
+\index{funcs.cpp@{funcs.cpp}!string\_size@{string\_size}}
+\index{string\_size@{string\_size}!funcs.cpp@{funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{string\_size()}{string\_size()}}
+{\footnotesize\ttfamily unsigned int string\+\_\+size (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Calculates string\textquotesingle{}s size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ pointer to string\textquotesingle{}s first element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Full string size including \textquotesingle{}\textbackslash{}0\textquotesingle{} 
+\end{DoxyReturn}

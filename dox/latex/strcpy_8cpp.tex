@@ -1,0 +1,34 @@
+\hypertarget{strcpy_8cpp}{}\doxysection{strcpy.\+cpp File Reference}
+\label{strcpy_8cpp}\index{strcpy.cpp@{strcpy.cpp}}
+{\ttfamily \#include \char`\"{}protos.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} \mbox{\hyperlink{strcpy_8cpp_ac5978683c9855b9b6c4702feedc9dd1c}{my\+\_\+strcpy}} (char $\ast$from, char $\ast$to)
+\begin{DoxyCompactList}\small\item\em A simply strcpy function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{strcpy_8cpp_ac5978683c9855b9b6c4702feedc9dd1c}\label{strcpy_8cpp_ac5978683c9855b9b6c4702feedc9dd1c}} 
+\index{strcpy.cpp@{strcpy.cpp}!my\_strcpy@{my\_strcpy}}
+\index{my\_strcpy@{my\_strcpy}!strcpy.cpp@{strcpy.cpp}}
+\doxysubsubsection{\texorpdfstring{my\_strcpy()}{my\_strcpy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} my\+\_\+strcpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{from,  }\item[{char $\ast$}]{to }\end{DoxyParamCaption})}
+
+
+
+A simply strcpy function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & from -\/ string to copy from \\
+\hline
+{\em char$\ast$} & to -\/ string to copy to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK in all cases except when MEM\+\_\+\+LIM 
+
+MEM\+\_\+\+ERR if one of the pointers is NULL
+\end{DoxyReturn}
+A simple function that copies c-\/string from to c-\/string to without minding the sizes of both Actually may cause segmentation fault if used wrong 

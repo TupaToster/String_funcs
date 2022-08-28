@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_unit__test_8cpp" xml:lang="en-US">
+<title>unit_test.cpp File Reference</title>
+<indexterm><primary>unit_test.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_unit__test_8cpp_1a8e55f3e436b0268b26875038536f8e53">unit_test</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_unit__test_8cpp_1a8e55f3e436b0268b26875038536f8e53"/>    <section>
+    <title>unit_test()</title>
+<indexterm><primary>unit_test</primary><secondary>unit_test.cpp</secondary></indexterm>
+<indexterm><primary>unit_test.cpp</primary><secondary>unit_test</secondary></indexterm>
+<para><computeroutput>void unit_test ( )</computeroutput></para></section>
+</section>
+</section>

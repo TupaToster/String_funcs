@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_funcs_8cpp" xml:lang="en-US">
+<title>funcs.cpp File Reference</title>
+<indexterm><primary>funcs.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>unsigned int <link linkend="_funcs_8cpp_1a3dcf01851a2dc2905cf202dae9d1e7fa">string_size</link> (const char *str)</para>
+
+<para>Calculates string&apos;s size. </para>
+</listitem>
+            <listitem><para><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> <link linkend="_funcs_8cpp_1a0fe7a7d65fbf49b4ebb51716ef05168e">my_getline</link> (char **str)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A file to store basic string functions (for now at least) </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_funcs_8cpp_1a0fe7a7d65fbf49b4ebb51716ef05168e"/>    <section>
+    <title>my_getline()</title>
+<indexterm><primary>my_getline</primary><secondary>funcs.cpp</secondary></indexterm>
+<indexterm><primary>funcs.cpp</primary><secondary>my_getline</secondary></indexterm>
+<para><computeroutput><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> my_getline (char ** str)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Reads line from stdin
+\param str - pointer to string&apos;s first element
+\return OK - string read, all ok
+\return MEM_LIM - program ran out of free memory
+</computeroutput></literallayout> Also dynamically changes string&apos;s size to match the input 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_funcs_8cpp_1a3dcf01851a2dc2905cf202dae9d1e7fa"/>    <section>
+    <title>string_size()</title>
+<indexterm><primary>string_size</primary><secondary>funcs.cpp</secondary></indexterm>
+<indexterm><primary>funcs.cpp</primary><secondary>string_size</secondary></indexterm>
+<para><computeroutput>unsigned int string_size (const char * str)</computeroutput></para><para>
+
+<para>Calculates string&apos;s size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>str</entry>
+                                <entry>
+<para>- pointer to string&apos;s first element </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Full string size including &apos;\0&apos; </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

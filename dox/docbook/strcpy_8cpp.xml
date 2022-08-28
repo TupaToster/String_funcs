@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_strcpy_8cpp" xml:lang="en-US">
+<title>strcpy.cpp File Reference</title>
+<indexterm><primary>strcpy.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> <link linkend="_strcpy_8cpp_1ac5978683c9855b9b6c4702feedc9dd1c">my_strcpy</link> (char *from, char *to)</para>
+
+<para>A simply strcpy function. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_strcpy_8cpp_1ac5978683c9855b9b6c4702feedc9dd1c"/>    <section>
+    <title>my_strcpy()</title>
+<indexterm><primary>my_strcpy</primary><secondary>strcpy.cpp</secondary></indexterm>
+<indexterm><primary>strcpy.cpp</primary><secondary>my_strcpy</secondary></indexterm>
+<para><computeroutput><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> my_strcpy (char * from, char * to)</computeroutput></para><para>
+
+<para>A simply strcpy function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>char*</entry>
+                                <entry>
+<para>from - string to copy from </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>char*</entry>
+                                <entry>
+<para>to - string to copy to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>OK in all cases except when MEM_LIM </para>
+
+<para>MEM_ERR if one of the pointers is NULL</para>
+</formalpara>
+A simple function that copies c-string from to c-string to without minding the sizes of both Actually may cause segmentation fault if used wrong </para>
+</section>
+</section>
+</section>
