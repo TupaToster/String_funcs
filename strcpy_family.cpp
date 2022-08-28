@@ -7,7 +7,7 @@
 	\return OK - if all ok
 	\return MEM_LIM - if there is no mem left to copy
 
-	Короче я заебался думать и поэтому она копирует с подгоном по размеру и мне похуй
+	Р»Р°РґРЅРѕ СЏ СЃРµР№С‡Р°СЃ РІСЃРµ РїРѕС„РёРєС€Сѓ РєР°Рє С‚РѕР»СЊРєРѕ СЂР°Р·Р±РёСЂСѓСЃСЊ СЃ РіРёС‚РѕРјС‹
 */
 
 action_status my_strcpy (char** from, char** to) {
