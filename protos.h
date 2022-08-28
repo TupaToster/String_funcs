@@ -2,8 +2,9 @@
 #include <TXlib.h>
 
 enum action_status {
-	OK      = 1,
-	MEM_ERR = 0
+	OK      = 0,
+	MEM_ERR = -1,
+	OVERFL = 1
 };
 
 action_status my_getline (char** string_to_input_to);
