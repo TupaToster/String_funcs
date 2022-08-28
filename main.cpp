@@ -8,13 +8,13 @@ int main (int argc, char* argv[]){
 		return 0;	 	
 	}
 
-	printf("Input string to apply stuff to: ");
+	printf ("Input string to apply stuff to: ");
 	
 	char* s = NULL;
 	s = (char*) malloc (1);
 	if (s == NULL) return -1;	
 
-	if (my_getline(&s) == MEM_LIM) return -1;
+	if (my_getline (&s) == MEM_LIM) return -1;
 
 	printf("%s", s);
 }	
