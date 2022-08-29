@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
+
+
 
 /*!
     Displays status of action that involves changing memory or reading it
@@ -14,3 +17,5 @@ enum action_status{
 action_status my_fputs (const char* out_str, FILE* stream);
 
 int my_strlen (const char* str);
+
+action_status my_strcpy (char* const from, char* const to);

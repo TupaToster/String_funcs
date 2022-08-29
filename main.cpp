@@ -13,5 +13,11 @@ int main (int argc, char* argv[]) {
 
     }
 
-    printf ("%d", my_strlen ("aye2289"));
+    char a[4] = "123";
+    char b[4] = "456";
+    printf ("%s %s\n", a, b);
+    assert (my_strcpy (a, b) == OK);
+    printf ("%s %s", a, b);
+
+    
 }
