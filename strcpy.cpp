@@ -45,7 +45,7 @@ max amount of copied chars (with \0) is "n"
 
 Still may cause segmentation fault if used wrong but more rare
 */
-action_status my_strncpy (char* from, char* to, unsinged int n) {
+action_status my_strncpy (char* const from, char* const to, const unsigned int n) {
 
     if (from == NULL or to == NULL) return MEM_ERR;
 
@@ -58,7 +58,7 @@ action_status my_strncpy (char* from, char* to, unsinged int n) {
     to[iter] = '\0';
     
     if(iter == n-1) return OVERFL;
-    else return OK;
+    return OK;
 }
 
 /*!
@@ -84,11 +84,11 @@ action_status my_smart_strcpy (char** from, char** to) {
         return MEM_ERR;
     }
 
-    char* temp = NULL ///< Temporary pointer to store allocated memory's adress
+    char* temp = NULL; ///< Temporary pointer to store allocated memory's adress
 
-    temp = malloc (*to, string_size (*from));
+    temp = (char*) realloc (*to, string_size (*from));
     if(temp == NULL) return OVERFL;
-    else             *str = temp;
+    else             *to = temp;
 
     unsigned int iter = 0;
     for (iter = 0; from[iter] != '\0'; iter++) {

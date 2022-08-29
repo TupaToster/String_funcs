@@ -19,12 +19,14 @@ action_status my_getline (char** const string_to_input_to, FILE* input);
 
 unsigned int string_size (const char* string_to_measure);
 
-action_status my_strncpy (char* const from, char* const to, unsigned int n);
+action_status my_strncpy (char* const from, char* const to, const unsigned int n);
 
 action_status my_strcpy (char* const from, char* const to);
 
 action_status my_smart_strcpy (char** const from, char** const to);
 
-int my_fputs (const char* out_str, const FILE* out_fstream);
+action_status my_fputs (const char* out_str, FILE* out_fstream);
+
+action_status str_write (char* const to, const char* from);
 
 void unit_test ();

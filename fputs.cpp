@@ -1,5 +1,5 @@
 // (C) Poltorashka, Inc.
-#include "protos.h";
+#include "protos.h"
 
 /*!
     \brief Prints out a c-string
@@ -14,13 +14,13 @@ For example: if there is nothing or nowhere to output, then the program will
 just return MEM_ERR. It's based on fputc because i just felt like it should be.
 */
 
-action_status my_fputc (const char* out_str, const FILE* out_fstream) {
+action_status my_fputs (const char* out_str, FILE* out_fstream) {
 
     if (out_str == NULL or out_fstream == NULL) return MEM_ERR;
 
     for (unsigned int iter = 0; out_str[iter] != '\0'; iter++) {
         
-        if (fputc ((int) str[iter], out_fstream) == EOF) return OVERFL;       
+        if (fputc ((int) out_str[iter], out_fstream) == EOF) return OVERFL;       
     }
 
     return OK;
