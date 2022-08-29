@@ -13,6 +13,5 @@ int main (int argc, char* argv[]) {
 
     }
 
-    my_fputs ("lol man", stdout);    
-
+    printf ("%d", my_strlen ("aye2289"));
 }

@@ -12,3 +12,5 @@ enum action_status{
 };
 
 action_status my_fputs (const char* out_str, FILE* stream);
+
+int my_strlen (const char* str);

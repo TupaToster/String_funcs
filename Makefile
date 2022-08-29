@@ -4,8 +4,11 @@ CFLAGS=-Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal
 
 all: string.exe
 
-string.exe: main.o fputs.o 
-	$(CC) $(CFLAGS) main.o fputs.o -o string.exe
+string.exe: main.o fputs.o strlen.o
+	$(CC) $(CFLAGS) main.o  strlen.o fputs.o -o string.exe
+
+my_strlen.o: strlen.cpp
+	$(CC) $(CFLAGS) strlen.cpp -c
 
 fputs.o: fputs.cpp
 	$(CC) $(CFLAGS) fputs.cpp -c
