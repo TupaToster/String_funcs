@@ -2,6 +2,11 @@
 #include "protos.h"
 
 /*!
+    \file
+This file contains family of my_strcpy, my_strncpy, my_smart_strcpy
+*/
+
+/*!
     \brief A simply strcpy function
     \param from - string to copy from
     \param to   - string to copy to

@@ -1,6 +1,12 @@
 // (C) Poltorashka, Inc.
 #include "protos.h"
 
+/*!
+	\file
+Main body that will present some opportunities to test 
+functions of a program to a user, but for now it's just eh 
+*/
+
 int main (int argc, char* argv[]){
 	
 	if (argc > 1 and strcmp (argv[1], "--test") == 0){

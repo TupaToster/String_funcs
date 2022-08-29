@@ -1,7 +1,8 @@
 // (C) Poltorashka, Inc.
 /*!
 	\file
-	A file to store basic string functions (for now at least)
+	A file that stores basic functions such as string_size and my_getline
+	
 */
 
 #include "protos.h"

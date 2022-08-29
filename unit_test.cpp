@@ -10,11 +10,12 @@ void unit_test () {
     
     char* test_str = (char*) malloc (4);
 
-    my_getline (&test_str, test_input);
+    my_getline (&test_str, test_input); 
     
-    printf("%s", test_str);
     ASRT (strcmp (test_str, "abc") == 0);
     ASRT (strlen (test_str) == 3);
     //EOTest
     
+    
+
 }
