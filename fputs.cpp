@@ -1,3 +1,4 @@
+// (C) Poltorashka, Inc.
 #include "protos.h";
 
 /*!
@@ -19,7 +20,7 @@ action_status my_fputc (const char* out_str, const FILE* out_fstream) {
 
     for (unsigned int iter = 0; out_str[iter] != '\0'; iter++) {
         
-        if( fputc((int) str[iter], out_fstream) == EOF) return OVERFL;       
+        if (fputc ((int) str[iter], out_fstream) == EOF) return OVERFL;       
     }
 
     return OK;
