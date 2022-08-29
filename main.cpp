@@ -14,8 +14,7 @@ int main (int argc, char* argv[]) {
     }
     
     char* a = "a";
-    char* b = "abcdef";
-    assert (my_smart_strcpy (b, &a) == OK);
-    printf("%s", a);
-    return 0;
+    char* b = "bcdfef";
+    assert (my_strcat (b, &a) == OK);
+    printf ("%s", a);
 }

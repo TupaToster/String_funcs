@@ -24,4 +24,4 @@ action_status my_strncpy (char* const from, char* const to, const unsigned int n
 
 action_status my_smart_strcpy (const char* from, char** to);
 
-action_status my_strcat (char** from, char** to);
+action_status my_strcat (const char* from, char** to);
