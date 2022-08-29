@@ -64,23 +64,18 @@ action_status my_strncpy (char* const from, char* const to, unsigned int n) {
 
 Smart ctrcpy rellocates "to" string for it to fit exactly as many chars as "from"
 */
-action_status my_smart_strcpy (char** from, char** to) {
+action_status my_smart_strcpy (const char* from, char** to) {
 
-    if (from == NULL or to == NULL or *from == NULL or *to == NULL) return MEM_ERR;
+    if (from == NULL or to == NULL or *to == NULL) return MEM_ERR;
 
-    char* temp_str = (char*) malloc (my_strlen (*from) + 1);
-    if (temp_str == NULL) return OVERFL;
-    *to = temp_str;
-    delete temp_str;
+    char* temp = (char*) malloc (my_strlen(from) + 1);
+    if (temp == NULL) return OVERFL;
+    *to = temp;
 
-    unsigned iter = 0;
-    for (iter = 0; from[iter] != '\0'; iter++) {
+    unsigned int iter = 0;
+    for (iter = 0; from[iter] != '\0'; iter++) (*to)[iter] = from[iter];
+    (*to)[iter] = '\0';
 
-        to[iter] = from[iter];
-    }
-
-    to[iter] = '\0';
-
-    return OK;   
+    return OK;
 }
 
