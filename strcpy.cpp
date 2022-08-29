@@ -40,7 +40,7 @@ also can kinda cause seg fault
 */
 action_status my_strncpy (char* const from, char* const to, unsigned int n) {
 
-    if (from == NULL or to == NULL) return OVERFL;
+    if (from == NULL or to == NULL) return MEM_ERR;
     
     unsigned int iter = 0;
 
@@ -50,6 +50,37 @@ action_status my_strncpy (char* const from, char* const to, unsigned int n) {
 
     if (iter == n and from[iter] == '\0') return OK;
     if (iter == n and from[iter] != '\0') return OVERFL;
-    
+
     return OK;    
 }
+
+/*!
+    \brief Super smart strcpy
+    \param from - pointer to a string to copy from
+    \param to - pointer to a string to copy to
+    \return OK - if successfully copied
+    \return MEM_ERR - if some pointers are NULL
+    \return OVERFL - if pc runs out of storage space
+
+Smart ctrcpy rellocates "to" string for it to fit exactly as many chars as "from"
+*/
+action_status my_smart_strcpy (char** from, char** to) {
+
+    if (from == NULL or to == NULL or *from == NULL or *to == NULL) return MEM_ERR;
+
+    char* temp_str = (char*) malloc (my_strlen (*from) + 1);
+    if (temp_str == NULL) return OVERFL;
+    *to = temp_str;
+    delete temp_str;
+
+    unsigned iter = 0;
+    for (iter = 0; from[iter] != '\0'; iter++) {
+
+        to[iter] = from[iter];
+    }
+
+    to[iter] = '\0';
+
+    return OK;   
+}
+

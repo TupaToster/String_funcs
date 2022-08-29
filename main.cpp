@@ -13,9 +13,15 @@ int main (int argc, char* argv[]) {
 
     }
 
-    char a[4] = "123";
-    char b[4] = "456";
+    char* a = (char*) calloc (10, 1);
+    char* b = (char*) calloc (2, 1);
+    a[0] = '1';
+    a[1] = '2';
+    a[2] = '3';
+    a[3] = '\0';
+    b[0] = '1';
+    b[1] = '\0';
     printf ("%s %s\n", a, b);
-    assert (my_strncpy (a, b, 2) == OVERFL);
+    assert (my_smart_strcpy (&a, &b) == OK);
     printf ("%s %s", a, b);
 }

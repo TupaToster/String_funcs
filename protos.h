@@ -21,3 +21,5 @@ int my_strlen (const char* str);
 action_status my_strcpy (char* const from, char* const to);
 
 action_status my_strncpy (char* const from, char* const to, const unsigned int n);
+
+action_status my_smart_strcpy (char** from, char** to);
