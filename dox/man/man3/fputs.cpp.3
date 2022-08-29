@@ -1,0 +1,39 @@
+.TH "fputs.cpp" 3 "Mon Aug 29 2022" "Version 2" "String.my" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fputs.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'protos\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_fputs\fP (const char *out_str, FILE *stream)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBaction_status\fP my_fputs (const char * out_str, FILE * stream)"
+
+.PP
+.nf
+\brief Simple file output function
+\param out_str - const string to output
+\param stream  - output stream
+\return OK - if everything went cool
+\return MEM_ERR - if one of parametres is NULL
+\return OVERFL - if it's impossible to put char into file
+
+.fi
+.PP
+ Prints a string into a file and doesn't mind sizes of both, also can't abort program 
+.PP
+Definition at line 14 of file fputs\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for String\&.my from the source code\&.

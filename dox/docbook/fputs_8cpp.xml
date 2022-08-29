@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_fputs_8cpp" xml:lang="en-US">
+<title>fputs.cpp File Reference</title>
+<indexterm><primary>fputs.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> <link linkend="_fputs_8cpp_1a3f6b7b5f831029c14df24abeac1d57e8">my_fputs</link> (const char *out_str, FILE *stream)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_fputs_8cpp_1a3f6b7b5f831029c14df24abeac1d57e8"/>    <section>
+    <title>my_fputs()</title>
+<indexterm><primary>my_fputs</primary><secondary>fputs.cpp</secondary></indexterm>
+<indexterm><primary>fputs.cpp</primary><secondary>my_fputs</secondary></indexterm>
+<para><computeroutput><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> my_fputs (const char * out_str, FILE * stream)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Simple file output function
+\param out_str - const string to output
+\param stream  - output stream
+\return OK - if everything went cool
+\return MEM_ERR - if one of parametres is NULL
+\return OVERFL - if it&apos;s impossible to put char into file
+</computeroutput></literallayout> Prints a string into a file and doesn&apos;t mind sizes of both, also can&apos;t abort program </para>
+<para>
+Definition at line 14 of file fputs.cpp.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,85 @@
+.TH "protos.h" 3 "Mon Aug 29 2022" "Version 2" "String.my" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+protos.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBaction_status\fP { \fBOK\fP = 0, \fBMEM_ERR\fP = -1, \fBOVERFL\fP = 1 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_fputs\fP (const char *out_str, FILE *stream)"
+.br
+.ti -1c
+.RI "int \fBmy_strlen\fP (const char *str)"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBaction_status\fP"
+Displays status of action that involves changing memory or reading it 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOK \fP\fP
+Everything ok\&. 
+.TP
+\fB\fIMEM_ERR \fP\fP
+Memory error, i\&.e\&. something wrong with pointers\&. 
+.TP
+\fB\fIOVERFL \fP\fP
+Overflow error, i\&.e\&. not enough memory\&. 
+.PP
+Definition at line 8 of file protos\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBaction_status\fP my_fputs (const char * out_str, FILE * stream)"
+
+.PP
+.nf
+\brief Simple file output function
+\param out_str - const string to output
+\param stream  - output stream
+\return OK - if everything went cool
+\return MEM_ERR - if one of parametres is NULL
+\return OVERFL - if it's impossible to put char into file
+
+.fi
+.PP
+ Prints a string into a file and doesn't mind sizes of both, also can't abort program 
+.PP
+Definition at line 14 of file fputs\&.cpp\&.
+.SS "int my_strlen (const char * str)"
+
+.PP
+.nf
+\brief Returns string length
+\param str - string to calculate len of
+\return -1 - if str is NULL
+\return anything >=0 - string's len
+
+.fi
+.PP
+ Calculates string length\&. Nothing more to say 
+.PP
+Definition at line 10 of file strlen\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for String\&.my from the source code\&.

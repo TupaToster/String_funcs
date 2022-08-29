@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_strlen_8cpp" xml:lang="en-US">
+<title>strlen.cpp File Reference</title>
+<indexterm><primary>strlen.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_strlen_8cpp_1af2f145304414f93f65d2035c25e76e86">my_strlen</link> (const char *str)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_strlen_8cpp_1af2f145304414f93f65d2035c25e76e86"/>    <section>
+    <title>my_strlen()</title>
+<indexterm><primary>my_strlen</primary><secondary>strlen.cpp</secondary></indexterm>
+<indexterm><primary>strlen.cpp</primary><secondary>my_strlen</secondary></indexterm>
+<para><computeroutput>int my_strlen (const char * str)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Returns string length
+\param str - string to calculate len of
+\return -1 - if str is NULL
+\return anything &gt;=0 - string&apos;s len
+</computeroutput></literallayout> Calculates string length. Nothing more to say </para>
+<para>
+Definition at line 10 of file strlen.cpp.</para>
+</section>
+</section>
+</section>

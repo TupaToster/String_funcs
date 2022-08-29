@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="protos_8h" kind="file" language="C++">
+    <compoundname>protos.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includedby refid="fputs_8cpp" local="yes">fputs.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="strlen_8cpp" local="yes">strlen.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>protos.h</label>
+        <link refid="protos_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>strlen.cpp</label>
+        <link refid="strlen_8cpp"/>
+      </node>
+      <node id="3">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>protos.h</label>
+        <link refid="protos_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>fputs.cpp</label>
+        <link refid="fputs_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" prot="public" static="no" strong="no">
+        <type></type>
+        <name>action_status</name>
+        <enumvalue id="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" prot="public">
+          <name>OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Everything ok. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" prot="public">
+          <name>MEM_ERR</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+<para>Memory error, i.e. something wrong with pointers. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" prot="public">
+          <name>OVERFL</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Overflow error, i.e. not enough memory. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays status of action that involves changing memory or reading it </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="8" column="1" bodyfile="protos.h" bodystart="8" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="protos_8h_1a3f6b7b5f831029c14df24abeac1d57e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_fputs</definition>
+        <argsstring>(const char *out_str, FILE *stream)</argsstring>
+        <name>my_fputs</name>
+        <param>
+          <type>const char *</type>
+          <declname>out_str</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Simple file output function
+\param out_str - const string to output
+\param stream  - output stream
+\return OK - if everything went cool
+\return MEM_ERR - if one of parametres is NULL
+\return OVERFL - if it&apos;s impossible to put char into file
+</verbatim> Prints a string into a file and doesn&apos;t mind sizes of both, also can&apos;t abort program </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="14" column="15" bodyfile="fputs.cpp" bodystart="14" bodyend="24" declfile="protos.h" declline="14" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1af2f145304414f93f65d2035c25e76e86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int my_strlen</definition>
+        <argsstring>(const char *str)</argsstring>
+        <name>my_strlen</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Returns string length
+\param str - string to calculate len of
+\return -1 - if str is NULL
+\return anything &gt;=0 - string&apos;s len
+</verbatim> Calculates string length. Nothing more to say </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="16" column="5" bodyfile="strlen.cpp" bodystart="10" bodyend="18" declfile="protos.h" declline="16" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref>{</highlight></codeline>
+<codeline lineno="9" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
+<codeline lineno="10" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref><sp/>=<sp/>-1,<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" kindref="member">OVERFL</ref><sp/><sp/>=<sp/>1<sp/><sp/></highlight></codeline>
+<codeline lineno="12" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a3f6b7b5f831029c14df24abeac1d57e8" kindref="member">my_fputs</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>out_str,<sp/>FILE*<sp/>stream);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af2f145304414f93f65d2035c25e76e86" kindref="member">my_strlen</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str);</highlight></codeline>
+    </programlisting>
+    <location file="protos.h"/>
+  </compounddef>
+</doxygen>

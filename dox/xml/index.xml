@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="fputs_8cpp" kind="file"><name>fputs.cpp</name>
+    <member refid="fputs_8cpp_1a3f6b7b5f831029c14df24abeac1d57e8" kind="function"><name>my_fputs</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="protos_8h" kind="file"><name>protos.h</name>
+    <member refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kind="enum"><name>action_status</name></member>
+    <member refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kind="enumvalue"><name>OK</name></member>
+    <member refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kind="enumvalue"><name>MEM_ERR</name></member>
+    <member refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" kind="enumvalue"><name>OVERFL</name></member>
+    <member refid="protos_8h_1a3f6b7b5f831029c14df24abeac1d57e8" kind="function"><name>my_fputs</name></member>
+    <member refid="protos_8h_1af2f145304414f93f65d2035c25e76e86" kind="function"><name>my_strlen</name></member>
+  </compound>
+  <compound refid="strlen_8cpp" kind="file"><name>strlen.cpp</name>
+    <member refid="strlen_8cpp_1af2f145304414f93f65d2035c25e76e86" kind="function"><name>my_strlen</name></member>
+  </compound>
+</doxygenindex>
