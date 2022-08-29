@@ -15,6 +15,6 @@ int main (int argc, char* argv[]) {
     
     char* a = "a";
     char* b = "bcdfef";
-    assert (my_strcat (b, &a) == OK);
+    assert (my_strncat (b, &a, 4) == OK);
     printf ("%s", a);
 }

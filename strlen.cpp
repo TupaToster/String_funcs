@@ -7,7 +7,7 @@
 
 Calculates string length. Nothing more to say
 */
-int my_strlen (const char* str) {
+unsigned int my_strlen (const char* str) {
     
     if (str == NULL) return -1;
 

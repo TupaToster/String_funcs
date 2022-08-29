@@ -16,7 +16,7 @@ enum action_status{
 
 action_status my_fputs (const char* out_str, FILE* stream);
 
-int my_strlen (const char* str);
+unsigned int my_strlen (const char* str);
 
 action_status my_strcpy (char* const from, char* const to);
 
@@ -25,3 +25,5 @@ action_status my_strncpy (char* const from, char* const to, const unsigned int n
 action_status my_smart_strcpy (const char* from, char** to);
 
 action_status my_strcat (const char* from, char** to);
+
+action_status my_strncat (const char* from, char** to, unsigned int n);

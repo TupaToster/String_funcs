@@ -22,8 +22,6 @@ strcat.o: strcat.cpp
 main.o: main.cpp
 	$(CC) $(CFLAGS) main.cpp -c
 
-
-
 clean:
 	rm -rf *.o *.exe*
 
