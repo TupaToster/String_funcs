@@ -16,8 +16,6 @@ int main (int argc, char* argv[]) {
     char a[4] = "123";
     char b[4] = "456";
     printf ("%s %s\n", a, b);
-    assert (my_strcpy (a, b) == OK);
+    assert (my_strncpy (a, b, 2) == OVERFL);
     printf ("%s %s", a, b);
-
-    
 }
