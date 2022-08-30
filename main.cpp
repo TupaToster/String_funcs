@@ -9,8 +9,9 @@
 */
 int main (int argc, char* argv[]) {
 
-    if (argc > 1 and strcmp (argv[1], "--test")) {
-
+    if (argc > 1 and strcmp (argv[1], "--test") == 0) {
+        unit_test ();
+        return 0;
     }
 
     

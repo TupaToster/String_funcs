@@ -14,6 +14,7 @@ char* my_strdup (const char* src) {
     
     char* return_val  = (char*) malloc (my_strlen (src));
     if (return_val == NULL) return NULL;
+    
     unsigned int iter = 0;
 
     for (iter = 0; src[iter] != '\0'; iter++) {

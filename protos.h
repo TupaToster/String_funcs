@@ -14,6 +14,16 @@ enum action_status{
     OVERFL  = 1  ///< Overflow error, i.e. not enough memory
 };
 
+/*!
+Assert but without stopping the program
+*/
+#define ASRT(cnd) if(!(cnd)) printf("\n"					 \
+									"Assertion failed: %s \n"\
+									"in file %s\n"			 \
+                					"function %s\n"			 \
+                					"line %d \n",		     \
+    				  #cnd, __FILE__, __PRETTY_FUNCTION__, __LINE__);
+
 action_status my_fputs (const char* out_str, FILE* stream);
 
 unsigned int my_strlen (const char* str);
@@ -33,3 +43,5 @@ action_status my_fgets (char** to, FILE* stream);
 char* my_strdup (const char* src);
 
 char* my_strchr (char* const src, const char ch);
+
+void unit_test ();
