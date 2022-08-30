@@ -13,8 +13,7 @@ int main (int argc, char* argv[]) {
 
     }
     
-    char* a = "a";
-    char* b = "bcdfef";
-    assert (my_strncat (b, &a, 4) == OK);
-    printf ("%s", a);
+    char* a = NULL;
+    assert (my_fgets (&a, stdin) == OK);
+    assert (my_fputs (a, stdout) == OK);
 }
