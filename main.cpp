@@ -12,8 +12,9 @@ int main (int argc, char* argv[]) {
     if (argc > 1 and strcmp (argv[1], "--test")) {
 
     }
-    
-    char* a = NULL;
-    assert (my_fgets (&a, stdin) == OK);
-    assert (my_fputs (a, stdout) == OK);
+
+    char* src = NULL;
+    my_smart_strcpy ("absc", &src);
+    char* val = my_strdup (src);
+    my_fputs (val, stdout);
 }

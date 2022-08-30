@@ -66,7 +66,7 @@ Smart ctrcpy rellocates "to" string for it to fit exactly as many chars as "from
 */
 action_status my_smart_strcpy (const char* from, char** to) {
 
-    if (from == NULL or to == NULL or *to == NULL) return MEM_ERR;
+    if (from == NULL or to == NULL) return MEM_ERR;
 
     char* temp = (char*) malloc (my_strlen(from) + 1);
     if (temp == NULL) return OVERFL;
