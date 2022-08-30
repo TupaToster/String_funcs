@@ -38,9 +38,20 @@ action_status my_fgets (char** to, FILE* stream) {
         input_ch = fgetc (stream);
     }
 
+    if (iter == 0){ 
+        
+        *to = (char*) realloc (*to, 1);
+        if (*to == NULL) return OVERFL;
+
+        if (input_ch == '\n') (*to)[iter] = '\n';
+        else (*to)[iter] = '\0';    
+
+        return OK;
+    }
+
     *to = (char*) realloc (*to, iter);
+    
     if (*to == NULL) return OVERFL;
     (*to)[iter] = '\0';
-
     return OK;
 }

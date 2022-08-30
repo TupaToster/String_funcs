@@ -6,6 +6,8 @@
     \param argc - count of com line args
     \param argv - array of com line args
     \return 0 - if OK
+
+Now will hold a program that will sort an array of strings also called "Onegin"
 */
 int main (int argc, char* argv[]) {
 
@@ -14,5 +16,17 @@ int main (int argc, char* argv[]) {
         return 0;
     }
 
+    FILE* input = fopen ("onegin", "r");
+
+    char* lines[6000] = {0};
+    char* temp        = NULL;
+    int line_cnt      = 0;
+
+    for (int i = 0; i < 6000; i++) {
+        
+        if (fgets (temp, 100, input) == NULL) break;
+    }
+
     
+
 }
