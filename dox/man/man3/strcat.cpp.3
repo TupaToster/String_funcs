@@ -1,0 +1,55 @@
+.TH "strcat.cpp" 3 "Tue Aug 30 2022" "Version 2" "String functions" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+strcat.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'protos\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_strcat\fP (const char *from, char **to)"
+.br
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_strncat\fP (const char *from, char **to, unsigned int n)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBaction_status\fP my_strcat (const char * from, char ** to)"
+
+.PP
+.nf
+\brief Concatenates strings
+\param from - string to concat
+\param to - ptr to string to concat to
+\return OK if allright
+\return MEM_ERR if one of ptrs is NULL
+\return OVERFL if pc is out of mem
+
+.fi
+.PP
+ Concatenates two strings into the 'to' one 
+.SS "\fBaction_status\fP my_strncat (const char * from, char ** to, unsigned int n)"
+
+.PP
+.nf
+\brief Concatenates two strings with limit
+\param from - string to concatenate from
+\param to - string to concatenate to
+\param n - max amount if symbols to concat from "from"
+\return OK - all fine
+\return MEM_ERR - one or more pts are NULL
+\return OVERFL - not enough memory
+
+.fi
+.PP
+ Concats two strings, but adds not more then n symbols from 'from' 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for String functions from the source code\&.

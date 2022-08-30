@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_strchr_8cpp" xml:lang="en-US">
+<title>strchr.cpp File Reference</title>
+<indexterm><primary>strchr.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_strchr_8cpp_1a2cc4cf5219af874ad19160df6458ea48">my_strchr</link> (char *const src, const char ch)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_strchr_8cpp_1a2cc4cf5219af874ad19160df6458ea48"/>    <section>
+    <title>my_strchr()</title>
+<indexterm><primary>my_strchr</primary><secondary>strchr.cpp</secondary></indexterm>
+<indexterm><primary>strchr.cpp</primary><secondary>my_strchr</secondary></indexterm>
+<para><computeroutput>char* my_strchr (char *const src, const char ch)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Finds a char
+\param src - string to search in
+\param ch - char to search for
+\return ptr to a char in string
+\return NULL if there is no char in string or no string
+</computeroutput></literallayout> Finds a set char in a set string and returns a ptr to char in the string </para>
+<para>
+Definition at line 13 of file strchr.cpp.</para>
+</section>
+</section>
+</section>

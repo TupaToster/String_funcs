@@ -1,0 +1,55 @@
+\hypertarget{strcpy_8cpp}{}\doxysection{strcpy.\+cpp File Reference}
+\label{strcpy_8cpp}\index{strcpy.cpp@{strcpy.cpp}}
+{\ttfamily \#include \char`\"{}protos.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} \mbox{\hyperlink{strcpy_8cpp_a72531846ab7d930fd1a509b0ad5851ad}{my\+\_\+strcpy}} (char $\ast$const from, char $\ast$const to)
+\item 
+\mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} \mbox{\hyperlink{strcpy_8cpp_a925a08a32744e62910b892013764ed83}{my\+\_\+strncpy}} (char $\ast$const from, char $\ast$const to, unsigned int n)
+\item 
+\mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} \mbox{\hyperlink{strcpy_8cpp_a4dc6f77e5a6731a3c4cca80a0ea6d9b0}{my\+\_\+smart\+\_\+strcpy}} (const char $\ast$from, char $\ast$$\ast$to)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{strcpy_8cpp_a4dc6f77e5a6731a3c4cca80a0ea6d9b0}\label{strcpy_8cpp_a4dc6f77e5a6731a3c4cca80a0ea6d9b0}} 
+\index{strcpy.cpp@{strcpy.cpp}!my\_smart\_strcpy@{my\_smart\_strcpy}}
+\index{my\_smart\_strcpy@{my\_smart\_strcpy}!strcpy.cpp@{strcpy.cpp}}
+\doxysubsubsection{\texorpdfstring{my\_smart\_strcpy()}{my\_smart\_strcpy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} my\+\_\+smart\+\_\+strcpy (\begin{DoxyParamCaption}\item[{const char $\ast$}]{from,  }\item[{char $\ast$$\ast$}]{to }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Super smart strcpy
+\param from - pointer to a string to copy from
+\param to - pointer to a string to copy to
+\return OK - if successfully copied
+\return MEM_ERR - if some pointers are NULL
+\return OVERFL - if pc runs out of storage space
+\end{DoxyVerb}
+ Smart ctrcpy rellocates \char`\"{}to\char`\"{} string for it to fit exactly as many chars as \char`\"{}from\char`\"{} \mbox{\Hypertarget{strcpy_8cpp_a72531846ab7d930fd1a509b0ad5851ad}\label{strcpy_8cpp_a72531846ab7d930fd1a509b0ad5851ad}} 
+\index{strcpy.cpp@{strcpy.cpp}!my\_strcpy@{my\_strcpy}}
+\index{my\_strcpy@{my\_strcpy}!strcpy.cpp@{strcpy.cpp}}
+\doxysubsubsection{\texorpdfstring{my\_strcpy()}{my\_strcpy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} my\+\_\+strcpy (\begin{DoxyParamCaption}\item[{char $\ast$const}]{from,  }\item[{char $\ast$const}]{to }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Simply copies one string into other
+\param from - string to copy from
+\param to - string to copy to
+\return OK - if copied
+\return MEM_ERR - if one or more parameters are NULL
+\end{DoxyVerb}
+ Simple cstcpy function that does not care about any possible damage it may make It is trying hard not to cause any seg fault \mbox{\Hypertarget{strcpy_8cpp_a925a08a32744e62910b892013764ed83}\label{strcpy_8cpp_a925a08a32744e62910b892013764ed83}} 
+\index{strcpy.cpp@{strcpy.cpp}!my\_strncpy@{my\_strncpy}}
+\index{my\_strncpy@{my\_strncpy}!strcpy.cpp@{strcpy.cpp}}
+\doxysubsubsection{\texorpdfstring{my\_strncpy()}{my\_strncpy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} my\+\_\+strncpy (\begin{DoxyParamCaption}\item[{char $\ast$const}]{from,  }\item[{char $\ast$const}]{to,  }\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief A bit more complex copy func
+\param from - string to copy from
+\param to - string to copy to
+\param n - number of chars to copy
+\return OK if all ok
+\return MEM_ERR if one or more ptrs 
+\return OVERFL if pc ran out of free mem
+\end{DoxyVerb}
+ Function to copy not more than n chars also can kinda cause seg fault 

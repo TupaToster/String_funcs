@@ -1,0 +1,25 @@
+\hypertarget{fgets_8cpp}{}\doxysection{fgets.\+cpp File Reference}
+\label{fgets_8cpp}\index{fgets.cpp@{fgets.cpp}}
+{\ttfamily \#include \char`\"{}protos.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} \mbox{\hyperlink{fgets_8cpp_acfb6838062d4b9eccc8c7db12539fa5f}{my\+\_\+fgets}} (char $\ast$$\ast$to, FILE $\ast$stream)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fgets_8cpp_acfb6838062d4b9eccc8c7db12539fa5f}\label{fgets_8cpp_acfb6838062d4b9eccc8c7db12539fa5f}} 
+\index{fgets.cpp@{fgets.cpp}!my\_fgets@{my\_fgets}}
+\index{my\_fgets@{my\_fgets}!fgets.cpp@{fgets.cpp}}
+\doxysubsubsection{\texorpdfstring{my\_fgets()}{my\_fgets()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} my\+\_\+fgets (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{to,  }\item[{FILE $\ast$}]{stream }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Gets string from input file
+\param to - string to read to
+\param stream - filestream to read rom
+\return OK - all fine
+\return MEM_ERR - one or more pts are NULL(ded)
+\return OVERFL - pc ran out of storage space (also erases everything from "to")
+\end{DoxyVerb}
+ Reads string from file dynamically changing string\textquotesingle{}s length may have a bit unefficient memory management 

@@ -1,0 +1,71 @@
+.TH "strcpy.cpp" 3 "Tue Aug 30 2022" "Version 2" "String functions" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+strcpy.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'protos\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_strcpy\fP (char *const from, char *const to)"
+.br
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_strncpy\fP (char *const from, char *const to, unsigned int n)"
+.br
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_smart_strcpy\fP (const char *from, char **to)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBaction_status\fP my_smart_strcpy (const char * from, char ** to)"
+
+.PP
+.nf
+\brief Super smart strcpy
+\param from - pointer to a string to copy from
+\param to - pointer to a string to copy to
+\return OK - if successfully copied
+\return MEM_ERR - if some pointers are NULL
+\return OVERFL - if pc runs out of storage space
+
+.fi
+.PP
+ Smart ctrcpy rellocates 'to' string for it to fit exactly as many chars as 'from' 
+.SS "\fBaction_status\fP my_strcpy (char *const from, char *const to)"
+
+.PP
+.nf
+\brief Simply copies one string into other
+\param from - string to copy from
+\param to - string to copy to
+\return OK - if copied
+\return MEM_ERR - if one or more parameters are NULL
+
+.fi
+.PP
+ Simple cstcpy function that does not care about any possible damage it may make It is trying hard not to cause any seg fault 
+.SS "\fBaction_status\fP my_strncpy (char *const from, char *const to, unsigned int n)"
+
+.PP
+.nf
+\brief A bit more complex copy func
+\param from - string to copy from
+\param to - string to copy to
+\param n - number of chars to copy
+\return OK if all ok
+\return MEM_ERR if one or more ptrs 
+\return OVERFL if pc ran out of free mem
+
+.fi
+.PP
+ Function to copy not more than n chars also can kinda cause seg fault 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for String functions from the source code\&.

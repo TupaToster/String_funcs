@@ -24,7 +24,8 @@
 */
 var NAVTREE =
 [
-  [ "String.my", "index.html", [
+  [ "String functions", "index.html", [
+    [ "String_funcs", "md__r_e_a_d_m_e.html", null ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
@@ -39,7 +40,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"files.html"
+"fgets_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

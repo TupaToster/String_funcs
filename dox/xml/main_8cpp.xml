@@ -10,6 +10,9 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="6">
+        <label>assert.h</label>
+      </node>
       <node id="4">
         <label>stdlib.h</label>
       </node>
@@ -21,6 +24,8 @@
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -72,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="main.cpp" line="10" column="5" bodyfile="main.cpp" bodystart="10" bodyend="17"/>
+        <location file="main.cpp" line="10" column="5" bodyfile="main.cpp" bodystart="10" bodyend="20"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -89,8 +94,11 @@
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="protos_8h_1af2f145304414f93f65d2035c25e76e86" kindref="member">my_strlen</ref><sp/>(</highlight><highlight class="stringliteral">&quot;aye2289&quot;</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>src<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a4dc6f77e5a6731a3c4cca80a0ea6d9b0" kindref="member">my_smart_strcpy</ref><sp/>(</highlight><highlight class="stringliteral">&quot;abcdefbd&quot;</highlight><highlight class="normal">,<sp/>&amp;src);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ch<sp/>=<sp/><ref refid="protos_8h_1a2cc4cf5219af874ad19160df6458ea48" kindref="member">my_strchr</ref><sp/>(src,<sp/></highlight><highlight class="charliteral">&apos;b&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fputs_8cpp_1a3f6b7b5f831029c14df24abeac1d57e8" kindref="member">my_fputs</ref><sp/>(ch,<sp/>stdout);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="main.cpp"/>
   </compounddef>

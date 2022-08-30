@@ -10,6 +10,9 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="6">
+        <label>assert.h</label>
+      </node>
       <node id="4">
         <label>stdlib.h</label>
       </node>
@@ -22,6 +25,8 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
       <node id="5">
         <label>string.h</label>
@@ -31,9 +36,9 @@
       </node>
     </incdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="strlen_8cpp_1af2f145304414f93f65d2035c25e76e86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int my_strlen</definition>
+      <memberdef kind="function" id="strlen_8cpp_1aba855dca0dac39e28eb5264dc3ec2049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int my_strlen</definition>
         <argsstring>(const char *str)</argsstring>
         <name>my_strlen</name>
         <param>
@@ -51,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="strlen.cpp" line="10" column="5" bodyfile="strlen.cpp" bodystart="10" bodyend="18"/>
+        <location file="strlen.cpp" line="10" column="14" bodyfile="strlen.cpp" bodystart="10" bodyend="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -60,7 +65,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10" refid="protos_8h_1af2f145304414f93f65d2035c25e76e86" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="strlen_8cpp_1af2f145304414f93f65d2035c25e76e86" kindref="member">my_strlen</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str)<sp/>{</highlight></codeline>
+<codeline lineno="10" refid="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="strlen_8cpp_1aba855dca0dac39e28eb5264dc3ec2049" kindref="member">my_strlen</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str)<sp/>{</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(str<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>

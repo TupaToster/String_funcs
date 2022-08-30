@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_fgets_8cpp" xml:lang="en-US">
+<title>fgets.cpp File Reference</title>
+<indexterm><primary>fgets.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> <link linkend="_fgets_8cpp_1acfb6838062d4b9eccc8c7db12539fa5f">my_fgets</link> (char **to, FILE *stream)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_fgets_8cpp_1acfb6838062d4b9eccc8c7db12539fa5f"/>    <section>
+    <title>my_fgets()</title>
+<indexterm><primary>my_fgets</primary><secondary>fgets.cpp</secondary></indexterm>
+<indexterm><primary>fgets.cpp</primary><secondary>my_fgets</secondary></indexterm>
+<para><computeroutput><link linkend="_protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00">action_status</link> my_fgets (char ** to, FILE * stream)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Gets string from input file
+\param to - string to read to
+\param stream - filestream to read rom
+\return OK - all fine
+\return MEM_ERR - one or more pts are NULL(ded)
+\return OVERFL - pc ran out of storage space (also erases everything from &quot;to&quot;)
+</computeroutput></literallayout> Reads string from file dynamically changing string&apos;s length may have a bit unefficient memory management </para>
+<para>
+Definition at line 14 of file fgets.cpp.</para>
+</section>
+</section>
+</section>

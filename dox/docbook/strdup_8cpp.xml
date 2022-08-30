@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_strdup_8cpp" xml:lang="en-US">
+<title>strdup.cpp File Reference</title>
+<indexterm><primary>strdup.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_strdup_8cpp_1af36482ca227a1916a8a2f93ae01fe510">my_strdup</link> (const char *src)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_strdup_8cpp_1af36482ca227a1916a8a2f93ae01fe510"/>    <section>
+    <title>my_strdup()</title>
+<indexterm><primary>my_strdup</primary><secondary>strdup.cpp</secondary></indexterm>
+<indexterm><primary>strdup.cpp</primary><secondary>my_strdup</secondary></indexterm>
+<para><computeroutput>char* my_strdup (const char * src)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Copies a string to heap
+\param src - string to copy
+\return ptr to an allocated memory
+</computeroutput></literallayout> Returns a pointer to a newly allocated memory that contains a copy of a string passed into it </para>
+<para>
+Definition at line 11 of file strdup.cpp.</para>
+</section>
+</section>
+</section>

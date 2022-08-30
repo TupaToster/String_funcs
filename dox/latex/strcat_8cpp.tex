@@ -1,0 +1,41 @@
+\hypertarget{strcat_8cpp}{}\doxysection{strcat.\+cpp File Reference}
+\label{strcat_8cpp}\index{strcat.cpp@{strcat.cpp}}
+{\ttfamily \#include \char`\"{}protos.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} \mbox{\hyperlink{strcat_8cpp_af3005e3df6fbf19089cfbad2aea69884}{my\+\_\+strcat}} (const char $\ast$from, char $\ast$$\ast$to)
+\item 
+\mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} \mbox{\hyperlink{strcat_8cpp_a62d0e1313a3cbc6334c8d643356b66e4}{my\+\_\+strncat}} (const char $\ast$from, char $\ast$$\ast$to, unsigned int n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{strcat_8cpp_af3005e3df6fbf19089cfbad2aea69884}\label{strcat_8cpp_af3005e3df6fbf19089cfbad2aea69884}} 
+\index{strcat.cpp@{strcat.cpp}!my\_strcat@{my\_strcat}}
+\index{my\_strcat@{my\_strcat}!strcat.cpp@{strcat.cpp}}
+\doxysubsubsection{\texorpdfstring{my\_strcat()}{my\_strcat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} my\+\_\+strcat (\begin{DoxyParamCaption}\item[{const char $\ast$}]{from,  }\item[{char $\ast$$\ast$}]{to }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Concatenates strings
+\param from - string to concat
+\param to - ptr to string to concat to
+\return OK if allright
+\return MEM_ERR if one of ptrs is NULL
+\return OVERFL if pc is out of mem
+\end{DoxyVerb}
+ Concatenates two strings into the \char`\"{}to\char`\"{} one \mbox{\Hypertarget{strcat_8cpp_a62d0e1313a3cbc6334c8d643356b66e4}\label{strcat_8cpp_a62d0e1313a3cbc6334c8d643356b66e4}} 
+\index{strcat.cpp@{strcat.cpp}!my\_strncat@{my\_strncat}}
+\index{my\_strncat@{my\_strncat}!strcat.cpp@{strcat.cpp}}
+\doxysubsubsection{\texorpdfstring{my\_strncat()}{my\_strncat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protos_8h_af617fb44a7c1958910a3e7a07b8b1d00}{action\+\_\+status}} my\+\_\+strncat (\begin{DoxyParamCaption}\item[{const char $\ast$}]{from,  }\item[{char $\ast$$\ast$}]{to,  }\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Concatenates two strings with limit
+\param from - string to concatenate from
+\param to - string to concatenate to
+\param n - max amount if symbols to concat from "from"
+\return OK - all fine
+\return MEM_ERR - one or more pts are NULL
+\return OVERFL - not enough memory
+\end{DoxyVerb}
+ Concats two strings, but adds not more then n symbols from \char`\"{}from\char`\"{} 

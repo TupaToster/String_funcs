@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="strcpy_8cpp" kind="file" language="C++">
+    <compoundname>strcpy.cpp</compoundname>
+    <includes refid="protos_8h" local="yes">protos.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>assert.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>protos.h</label>
+        <link refid="protos_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="1">
+        <label>strcpy.cpp</label>
+        <link refid="strcpy_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="strcpy_8cpp_1a72531846ab7d930fd1a509b0ad5851ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_strcpy</definition>
+        <argsstring>(char *const from, char *const to)</argsstring>
+        <name>my_strcpy</name>
+        <param>
+          <type>char *const</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>char *const</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Simply copies one string into other
+\param from - string to copy from
+\param to - string to copy to
+\return OK - if copied
+\return MEM_ERR - if one or more parameters are NULL
+</verbatim> Simple cstcpy function that does not care about any possible damage it may make It is trying hard not to cause any seg fault </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="strcpy.cpp" line="14" column="15" bodyfile="strcpy.cpp" bodystart="14" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="strcpy_8cpp_1a925a08a32744e62910b892013764ed83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_strncpy</definition>
+        <argsstring>(char *const from, char *const to, unsigned int n)</argsstring>
+        <name>my_strncpy</name>
+        <param>
+          <type>char *const</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>char *const</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief A bit more complex copy func
+\param from - string to copy from
+\param to - string to copy to
+\param n - number of chars to copy
+\return OK if all ok
+\return MEM_ERR if one or more ptrs 
+\return OVERFL if pc ran out of free mem
+</verbatim> Function to copy not more than n chars also can kinda cause seg fault </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="strcpy.cpp" line="41" column="15" bodyfile="strcpy.cpp" bodystart="41" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="strcpy_8cpp_1a4dc6f77e5a6731a3c4cca80a0ea6d9b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_smart_strcpy</definition>
+        <argsstring>(const char *from, char **to)</argsstring>
+        <name>my_smart_strcpy</name>
+        <param>
+          <type>const char *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Super smart strcpy
+\param from - pointer to a string to copy from
+\param to - pointer to a string to copy to
+\return OK - if successfully copied
+\return MEM_ERR - if some pointers are NULL
+\return OVERFL - if pc runs out of storage space
+</verbatim> Smart ctrcpy rellocates &quot;to&quot; string for it to fit exactly as many chars as &quot;from&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="strcpy.cpp" line="67" column="15" bodyfile="strcpy.cpp" bodystart="67" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="protos_8h_1a72531846ab7d930fd1a509b0ad5851ad" refkind="member"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="strcpy_8cpp_1a72531846ab7d930fd1a509b0ad5851ad" kindref="member">my_strcpy</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>to)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(from<sp/>==<sp/>NULL<sp/>or<sp/>to<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(iter<sp/>=<sp/>0;<sp/>from[iter]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/>iter++)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to[iter]<sp/>=<sp/>from[iter];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>to[iter]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="protos_8h_1a745e53545447dc16984bbb926b3356db" refkind="member"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="strcpy_8cpp_1a925a08a32744e62910b892013764ed83" kindref="member">my_strncpy</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>to,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(from<sp/>==<sp/>NULL<sp/>or<sp/>to<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(iter<sp/>=<sp/>0;<sp/>from[iter]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal"><sp/>and<sp/>iter<sp/>&lt;<sp/>n;<sp/>iter++)<sp/>to[iter]<sp/>=<sp/>from[iter];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>to[iter]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iter<sp/>==<sp/>n<sp/>and<sp/>from[iter]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iter<sp/>==<sp/>n<sp/>and<sp/>from[iter]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" kindref="member">OVERFL</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="protos_8h_1a4dc6f77e5a6731a3c4cca80a0ea6d9b0" refkind="member"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="strcpy_8cpp_1a4dc6f77e5a6731a3c4cca80a0ea6d9b0" kindref="member">my_smart_strcpy</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(from<sp/>==<sp/>NULL<sp/>or<sp/>to<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>temp<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc<sp/>(<ref refid="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" kindref="member">my_strlen</ref>(from)<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" kindref="member">OVERFL</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>*to<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(iter<sp/>=<sp/>0;<sp/>from[iter]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/>iter++)<sp/>(*to)[iter]<sp/>=<sp/>from[iter];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>(*to)[iter]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="strcpy.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,37 @@
+.TH "fgets.cpp" 3 "Tue Aug 30 2022" "Version 2" "String functions" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fgets.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'protos\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_fgets\fP (char **to, FILE *stream)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBaction_status\fP my_fgets (char ** to, FILE * stream)"
+
+.PP
+.nf
+\brief Gets string from input file
+\param to - string to read to
+\param stream - filestream to read rom
+\return OK - all fine
+\return MEM_ERR - one or more pts are NULL(ded)
+\return OVERFL - pc ran out of storage space (also erases everything from "to")
+
+.fi
+.PP
+ Reads string from file dynamically changing string's length may have a bit unefficient memory management 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for String functions from the source code\&.

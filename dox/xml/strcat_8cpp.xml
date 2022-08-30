@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="strcat_8cpp" kind="file" language="C++">
+    <compoundname>strcat.cpp</compoundname>
+    <includes refid="protos_8h" local="yes">protos.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>assert.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>protos.h</label>
+        <link refid="protos_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>strcat.cpp</label>
+        <link refid="strcat_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="strcat_8cpp_1af3005e3df6fbf19089cfbad2aea69884" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_strcat</definition>
+        <argsstring>(const char *from, char **to)</argsstring>
+        <name>my_strcat</name>
+        <param>
+          <type>const char *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Concatenates strings
+\param from - string to concat
+\param to - ptr to string to concat to
+\return OK if allright
+\return MEM_ERR if one of ptrs is NULL
+\return OVERFL if pc is out of mem
+</verbatim> Concatenates two strings into the &quot;to&quot; one </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="strcat.cpp" line="14" column="15" bodyfile="strcat.cpp" bodystart="14" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="strcat_8cpp_1a62d0e1313a3cbc6334c8d643356b66e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_strncat</definition>
+        <argsstring>(const char *from, char **to, unsigned int n)</argsstring>
+        <name>my_strncat</name>
+        <param>
+          <type>const char *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Concatenates two strings with limit
+\param from - string to concatenate from
+\param to - string to concatenate to
+\param n - max amount if symbols to concat from &quot;from&quot;
+\return OK - all fine
+\return MEM_ERR - one or more pts are NULL
+\return OVERFL - not enough memory
+</verbatim> Concats two strings, but adds not more then n symbols from &quot;from&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="strcat.cpp" line="45" column="15" bodyfile="strcat.cpp" bodystart="45" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="protos_8h_1af3005e3df6fbf19089cfbad2aea69884" refkind="member"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="strcat_8cpp_1af3005e3df6fbf19089cfbad2aea69884" kindref="member">my_strcat</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(from<sp/>==<sp/>NULL<sp/>or<sp/>to<sp/>==<sp/>NULL<sp/>or<sp/>*to<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>to_len<sp/>=<sp/><ref refid="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" kindref="member">my_strlen</ref><sp/>(*to);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>temp<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc<sp/>(to_len<sp/>+<sp/><ref refid="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" kindref="member">my_strlen</ref><sp/>(from)<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" kindref="member">OVERFL</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(iter<sp/>=<sp/>0;<sp/>(*to)[iter]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/>iter++)<sp/>temp[iter]<sp/>=<sp/>(*to)[iter];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>from[iter<sp/>-<sp/>to_len]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/>iter++)<sp/>temp[iter]<sp/>=<sp/>from[iter<sp/>-<sp/>to_len];</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[iter]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>*to<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="protos_8h_1a706a9327e6ff3bfc775086bf1509fe8c" refkind="member"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="strcat_8cpp_1a62d0e1313a3cbc6334c8d643356b66e4" kindref="member">my_strncat</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(from<sp/>==<sp/>NULL<sp/>or<sp/>to<sp/>==<sp/>NULL<sp/>or<sp/>*to<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>to_len<sp/>=<sp/><ref refid="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" kindref="member">my_strlen</ref><sp/>(*to);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>temp<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc<sp/>(to_len<sp/>+<sp/>(<ref refid="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" kindref="member">my_strlen</ref>(from)<sp/>&lt;<sp/>n<sp/>?<sp/><ref refid="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" kindref="member">my_strlen</ref>(from)<sp/>:<sp/>n)<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" kindref="member">OVERFL</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(iter<sp/>=<sp/>0;<sp/>(*to)[iter]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/>iter++)<sp/>temp[iter]<sp/>=<sp/>(*to)[iter];</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>from[iter<sp/>-<sp/>to_len]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal"><sp/>and<sp/>iter<sp/>-<sp/>to_len<sp/>&lt;<sp/>n;<sp/>iter++)<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[iter]<sp/>=<sp/>from[iter<sp/>-<sp/>to_len];</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[iter]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>(*to)<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>;<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="strcat.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="fgets_8cpp" kind="file"><name>fgets.cpp</name>
+    <member refid="fgets_8cpp_1acfb6838062d4b9eccc8c7db12539fa5f" kind="function"><name>my_fgets</name></member>
+  </compound>
   <compound refid="fputs_8cpp" kind="file"><name>fputs.cpp</name>
     <member refid="fputs_8cpp_1a3f6b7b5f831029c14df24abeac1d57e8" kind="function"><name>my_fputs</name></member>
   </compound>
@@ -12,9 +15,36 @@
     <member refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kind="enumvalue"><name>MEM_ERR</name></member>
     <member refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" kind="enumvalue"><name>OVERFL</name></member>
     <member refid="protos_8h_1a3f6b7b5f831029c14df24abeac1d57e8" kind="function"><name>my_fputs</name></member>
-    <member refid="protos_8h_1af2f145304414f93f65d2035c25e76e86" kind="function"><name>my_strlen</name></member>
+    <member refid="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" kind="function"><name>my_strlen</name></member>
+    <member refid="protos_8h_1a72531846ab7d930fd1a509b0ad5851ad" kind="function"><name>my_strcpy</name></member>
+    <member refid="protos_8h_1a745e53545447dc16984bbb926b3356db" kind="function"><name>my_strncpy</name></member>
+    <member refid="protos_8h_1a4dc6f77e5a6731a3c4cca80a0ea6d9b0" kind="function"><name>my_smart_strcpy</name></member>
+    <member refid="protos_8h_1af3005e3df6fbf19089cfbad2aea69884" kind="function"><name>my_strcat</name></member>
+    <member refid="protos_8h_1a706a9327e6ff3bfc775086bf1509fe8c" kind="function"><name>my_strncat</name></member>
+    <member refid="protos_8h_1acfb6838062d4b9eccc8c7db12539fa5f" kind="function"><name>my_fgets</name></member>
+    <member refid="protos_8h_1af36482ca227a1916a8a2f93ae01fe510" kind="function"><name>my_strdup</name></member>
+    <member refid="protos_8h_1a2cc4cf5219af874ad19160df6458ea48" kind="function"><name>my_strchr</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="strcat_8cpp" kind="file"><name>strcat.cpp</name>
+    <member refid="strcat_8cpp_1af3005e3df6fbf19089cfbad2aea69884" kind="function"><name>my_strcat</name></member>
+    <member refid="strcat_8cpp_1a62d0e1313a3cbc6334c8d643356b66e4" kind="function"><name>my_strncat</name></member>
+  </compound>
+  <compound refid="strchr_8cpp" kind="file"><name>strchr.cpp</name>
+    <member refid="strchr_8cpp_1a2cc4cf5219af874ad19160df6458ea48" kind="function"><name>my_strchr</name></member>
+  </compound>
+  <compound refid="strcpy_8cpp" kind="file"><name>strcpy.cpp</name>
+    <member refid="strcpy_8cpp_1a72531846ab7d930fd1a509b0ad5851ad" kind="function"><name>my_strcpy</name></member>
+    <member refid="strcpy_8cpp_1a925a08a32744e62910b892013764ed83" kind="function"><name>my_strncpy</name></member>
+    <member refid="strcpy_8cpp_1a4dc6f77e5a6731a3c4cca80a0ea6d9b0" kind="function"><name>my_smart_strcpy</name></member>
+  </compound>
+  <compound refid="strdup_8cpp" kind="file"><name>strdup.cpp</name>
+    <member refid="strdup_8cpp_1af36482ca227a1916a8a2f93ae01fe510" kind="function"><name>my_strdup</name></member>
   </compound>
   <compound refid="strlen_8cpp" kind="file"><name>strlen.cpp</name>
-    <member refid="strlen_8cpp_1af2f145304414f93f65d2035c25e76e86" kind="function"><name>my_strlen</name></member>
+    <member refid="strlen_8cpp_1aba855dca0dac39e28eb5264dc3ec2049" kind="function"><name>my_strlen</name></member>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
   </compound>
 </doxygenindex>

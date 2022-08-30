@@ -6,17 +6,17 @@
 </programlisting><simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>int <link linkend="_strlen_8cpp_1af2f145304414f93f65d2035c25e76e86">my_strlen</link> (const char *str)</para>
+            <listitem><para>unsigned int <link linkend="_strlen_8cpp_1aba855dca0dac39e28eb5264dc3ec2049">my_strlen</link> (const char *str)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Function Documentation</title>
-<anchor xml:id="_strlen_8cpp_1af2f145304414f93f65d2035c25e76e86"/>    <section>
+<anchor xml:id="_strlen_8cpp_1aba855dca0dac39e28eb5264dc3ec2049"/>    <section>
     <title>my_strlen()</title>
 <indexterm><primary>my_strlen</primary><secondary>strlen.cpp</secondary></indexterm>
 <indexterm><primary>strlen.cpp</primary><secondary>my_strlen</secondary></indexterm>
-<para><computeroutput>int my_strlen (const char * str)</computeroutput></para>
+<para><computeroutput>unsigned int my_strlen (const char * str)</computeroutput></para>
 <para><literallayout><computeroutput>\brief Returns string length
 \param str - string to calculate len of
 \return -1 - if str is NULL

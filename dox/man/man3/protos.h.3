@@ -1,4 +1,4 @@
-.TH "protos.h" 3 "Mon Aug 29 2022" "Version 2" "String.my" \" -*- nroff -*-
+.TH "protos.h" 3 "Tue Aug 30 2022" "Version 2" "String functions" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,6 +11,8 @@ protos.h
 \fC#include <stdlib\&.h>\fP
 .br
 \fC#include <string\&.h>\fP
+.br
+\fC#include <assert\&.h>\fP
 .br
 
 .SS "Enumerations"
@@ -27,7 +29,31 @@ protos.h
 .RI "\fBaction_status\fP \fBmy_fputs\fP (const char *out_str, FILE *stream)"
 .br
 .ti -1c
-.RI "int \fBmy_strlen\fP (const char *str)"
+.RI "unsigned int \fBmy_strlen\fP (const char *str)"
+.br
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_strcpy\fP (char *const from, char *const to)"
+.br
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_strncpy\fP (char *const from, char *const to, const unsigned int n)"
+.br
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_smart_strcpy\fP (const char *from, char **to)"
+.br
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_strcat\fP (const char *from, char **to)"
+.br
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_strncat\fP (const char *from, char **to, const unsigned int n)"
+.br
+.ti -1c
+.RI "\fBaction_status\fP \fBmy_fgets\fP (char **to, FILE *stream)"
+.br
+.ti -1c
+.RI "char * \fBmy_strdup\fP (const char *src)"
+.br
+.ti -1c
+.RI "char * \fBmy_strchr\fP (char *const src, const char ch)"
 .br
 .in -1c
 .SH "Enumeration Type Documentation"
@@ -46,10 +72,22 @@ Memory error, i\&.e\&. something wrong with pointers\&.
 .TP
 \fB\fIOVERFL \fP\fP
 Overflow error, i\&.e\&. not enough memory\&. 
-.PP
-Definition at line 8 of file protos\&.h\&.
 .SH "Function Documentation"
 .PP 
+.SS "\fBaction_status\fP my_fgets (char ** to, FILE * stream)"
+
+.PP
+.nf
+\brief Gets string from input file
+\param to - string to read to
+\param stream - filestream to read rom
+\return OK - all fine
+\return MEM_ERR - one or more pts are NULL(ded)
+\return OVERFL - pc ran out of storage space (also erases everything from "to")
+
+.fi
+.PP
+ Reads string from file dynamically changing string's length may have a bit unefficient memory management 
 .SS "\fBaction_status\fP my_fputs (const char * out_str, FILE * stream)"
 
 .PP
@@ -64,9 +102,72 @@ Definition at line 8 of file protos\&.h\&.
 .fi
 .PP
  Prints a string into a file and doesn't mind sizes of both, also can't abort program 
+.SS "\fBaction_status\fP my_smart_strcpy (const char * from, char ** to)"
+
 .PP
-Definition at line 14 of file fputs\&.cpp\&.
-.SS "int my_strlen (const char * str)"
+.nf
+\brief Super smart strcpy
+\param from - pointer to a string to copy from
+\param to - pointer to a string to copy to
+\return OK - if successfully copied
+\return MEM_ERR - if some pointers are NULL
+\return OVERFL - if pc runs out of storage space
+
+.fi
+.PP
+ Smart ctrcpy rellocates 'to' string for it to fit exactly as many chars as 'from' 
+.SS "\fBaction_status\fP my_strcat (const char * from, char ** to)"
+
+.PP
+.nf
+\brief Concatenates strings
+\param from - string to concat
+\param to - ptr to string to concat to
+\return OK if allright
+\return MEM_ERR if one of ptrs is NULL
+\return OVERFL if pc is out of mem
+
+.fi
+.PP
+ Concatenates two strings into the 'to' one 
+.SS "char* my_strchr (char *const src, const char ch)"
+
+.PP
+.nf
+\brief Finds a char
+\param src - string to search in
+\param ch - char to search for
+\return ptr to a char in string
+\return NULL if there is no char in string or no string
+
+.fi
+.PP
+ Finds a set char in a set string and returns a ptr to char in the string 
+.SS "\fBaction_status\fP my_strcpy (char *const from, char *const to)"
+
+.PP
+.nf
+\brief Simply copies one string into other
+\param from - string to copy from
+\param to - string to copy to
+\return OK - if copied
+\return MEM_ERR - if one or more parameters are NULL
+
+.fi
+.PP
+ Simple cstcpy function that does not care about any possible damage it may make It is trying hard not to cause any seg fault 
+.SS "char* my_strdup (const char * src)"
+
+.PP
+.nf
+\brief Copies a string to heap
+\param src - string to copy
+\return ptr to an allocated memory
+
+.fi
+.PP
+ Returns a pointer to a newly allocated memory that contains a copy of a string passed into it 
+.SS "unsigned int my_strlen (const char * str)"
 
 .PP
 .nf
@@ -78,8 +179,36 @@ Definition at line 14 of file fputs\&.cpp\&.
 .fi
 .PP
  Calculates string length\&. Nothing more to say 
+.SS "\fBaction_status\fP my_strncat (const char * from, char ** to, unsigned int n)"
+
 .PP
-Definition at line 10 of file strlen\&.cpp\&.
+.nf
+\brief Concatenates two strings with limit
+\param from - string to concatenate from
+\param to - string to concatenate to
+\param n - max amount if symbols to concat from "from"
+\return OK - all fine
+\return MEM_ERR - one or more pts are NULL
+\return OVERFL - not enough memory
+
+.fi
+.PP
+ Concats two strings, but adds not more then n symbols from 'from' 
+.SS "\fBaction_status\fP my_strncpy (char *const from, char *const to, unsigned int n)"
+
+.PP
+.nf
+\brief A bit more complex copy func
+\param from - string to copy from
+\param to - string to copy to
+\param n - number of chars to copy
+\return OK if all ok
+\return MEM_ERR if one or more ptrs 
+\return OVERFL if pc ran out of free mem
+
+.fi
+.PP
+ Function to copy not more than n chars also can kinda cause seg fault 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for String\&.my from the source code\&.
+Generated automatically by Doxygen for String functions from the source code\&.

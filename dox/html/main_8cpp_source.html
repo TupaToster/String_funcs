@@ -96,11 +96,16 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html',''); initResiza
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    printf (<span class="stringliteral">&quot;%d&quot;</span>, <a class="code" href="protos_8h.html#af2f145304414f93f65d2035c25e76e86">my_strlen</a> (<span class="stringliteral">&quot;aye2289&quot;</span>));</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">char</span>* src = NULL;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="protos_8h.html#a4dc6f77e5a6731a3c4cca80a0ea6d9b0">my_smart_strcpy</a> (<span class="stringliteral">&quot;abcdefbd&quot;</span>, &amp;src);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">char</span>* ch = <a class="code" href="protos_8h.html#a2cc4cf5219af874ad19160df6458ea48">my_strchr</a> (src, <span class="charliteral">&#39;b&#39;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="fputs_8cpp.html#a3f6b7b5f831029c14df24abeac1d57e8">my_fputs</a> (ch, stdout);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="ttc" id="afputs_8cpp_html_a3f6b7b5f831029c14df24abeac1d57e8"><div class="ttname"><a href="fputs_8cpp.html#a3f6b7b5f831029c14df24abeac1d57e8">my_fputs</a></div><div class="ttdeci">action_status my_fputs(const char *out_str, FILE *stream)</div><div class="ttdef"><b>Definition:</b> <a href="fputs_8cpp_source.html#l00014">fputs.cpp:14</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">Will contain some ways to interact with functions.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00010">main.cpp:10</a></div></div>
 <div class="ttc" id="aprotos_8h_html"><div class="ttname"><a href="protos_8h.html">protos.h</a></div></div>
-<div class="ttc" id="aprotos_8h_html_af2f145304414f93f65d2035c25e76e86"><div class="ttname"><a href="protos_8h.html#af2f145304414f93f65d2035c25e76e86">my_strlen</a></div><div class="ttdeci">int my_strlen(const char *str)</div><div class="ttdef"><b>Definition:</b> <a href="strlen_8cpp_source.html#l00010">strlen.cpp:10</a></div></div>
+<div class="ttc" id="aprotos_8h_html_a2cc4cf5219af874ad19160df6458ea48"><div class="ttname"><a href="protos_8h.html#a2cc4cf5219af874ad19160df6458ea48">my_strchr</a></div><div class="ttdeci">char * my_strchr(char *const src, const char ch)</div><div class="ttdef"><b>Definition:</b> <a href="strchr_8cpp_source.html#l00013">strchr.cpp:13</a></div></div>
+<div class="ttc" id="aprotos_8h_html_a4dc6f77e5a6731a3c4cca80a0ea6d9b0"><div class="ttname"><a href="protos_8h.html#a4dc6f77e5a6731a3c4cca80a0ea6d9b0">my_smart_strcpy</a></div><div class="ttdeci">action_status my_smart_strcpy(const char *from, char **to)</div><div class="ttdef"><b>Definition:</b> <a href="strcpy_8cpp_source.html#l00067">strcpy.cpp:67</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

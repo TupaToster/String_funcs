@@ -5,10 +5,19 @@
     <includes local="no">stdio.h</includes>
     <includes local="no">stdlib.h</includes>
     <includes local="no">string.h</includes>
+    <includes local="no">assert.h</includes>
+    <includedby refid="fgets_8cpp" local="yes">fgets.cpp</includedby>
     <includedby refid="fputs_8cpp" local="yes">fputs.cpp</includedby>
     <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="strcat_8cpp" local="yes">strcat.cpp</includedby>
+    <includedby refid="strchr_8cpp" local="yes">strchr.cpp</includedby>
+    <includedby refid="strcpy_8cpp" local="yes">strcpy.cpp</includedby>
+    <includedby refid="strdup_8cpp" local="yes">strdup.cpp</includedby>
     <includedby refid="strlen_8cpp" local="yes">strlen.cpp</includedby>
     <incdepgraph>
+      <node id="5">
+        <label>assert.h</label>
+      </node>
       <node id="3">
         <label>stdlib.h</label>
       </node>
@@ -21,6 +30,8 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>string.h</label>
@@ -30,11 +41,11 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4">
+      <node id="9">
         <label>strlen.cpp</label>
         <link refid="strlen_8cpp"/>
       </node>
-      <node id="3">
+      <node id="4">
         <label>main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
@@ -47,10 +58,40 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
-      <node id="2">
+      <node id="3">
         <label>fputs.cpp</label>
         <link refid="fputs_8cpp"/>
+      </node>
+      <node id="5">
+        <label>strcat.cpp</label>
+        <link refid="strcat_8cpp"/>
+      </node>
+      <node id="8">
+        <label>strdup.cpp</label>
+        <link refid="strdup_8cpp"/>
+      </node>
+      <node id="2">
+        <label>fgets.cpp</label>
+        <link refid="fgets_8cpp"/>
+      </node>
+      <node id="6">
+        <label>strchr.cpp</label>
+        <link refid="strchr_8cpp"/>
+      </node>
+      <node id="7">
+        <label>strcpy.cpp</label>
+        <link refid="strcpy_8cpp"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="enum">
@@ -91,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="8" column="1" bodyfile="protos.h" bodystart="8" bodyend="12"/>
+        <location file="protos.h" line="11" column="1" bodyfile="protos.h" bodystart="11" bodyend="15"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -121,11 +162,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="14" column="15" bodyfile="fputs.cpp" bodystart="14" bodyend="24" declfile="protos.h" declline="14" declcolumn="15"/>
+        <location file="protos.h" line="17" column="15" bodyfile="fputs.cpp" bodystart="14" bodyend="24" declfile="protos.h" declline="17" declcolumn="15"/>
       </memberdef>
-      <memberdef kind="function" id="protos_8h_1af2f145304414f93f65d2035c25e76e86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int my_strlen</definition>
+      <memberdef kind="function" id="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int my_strlen</definition>
         <argsstring>(const char *str)</argsstring>
         <name>my_strlen</name>
         <param>
@@ -143,7 +184,232 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="16" column="5" bodyfile="strlen.cpp" bodystart="10" bodyend="18" declfile="protos.h" declline="16" declcolumn="5"/>
+        <location file="protos.h" line="19" column="14" bodyfile="strlen.cpp" bodystart="10" bodyend="18" declfile="protos.h" declline="19" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a72531846ab7d930fd1a509b0ad5851ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_strcpy</definition>
+        <argsstring>(char *const from, char *const to)</argsstring>
+        <name>my_strcpy</name>
+        <param>
+          <type>char *const</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>char *const</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Simply copies one string into other
+\param from - string to copy from
+\param to - string to copy to
+\return OK - if copied
+\return MEM_ERR - if one or more parameters are NULL
+</verbatim> Simple cstcpy function that does not care about any possible damage it may make It is trying hard not to cause any seg fault </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="21" column="15" bodyfile="strcpy.cpp" bodystart="14" bodyend="27" declfile="protos.h" declline="21" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a745e53545447dc16984bbb926b3356db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_strncpy</definition>
+        <argsstring>(char *const from, char *const to, const unsigned int n)</argsstring>
+        <name>my_strncpy</name>
+        <param>
+          <type>char *const</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>char *const</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief A bit more complex copy func
+\param from - string to copy from
+\param to - string to copy to
+\param n - number of chars to copy
+\return OK if all ok
+\return MEM_ERR if one or more ptrs 
+\return OVERFL if pc ran out of free mem
+</verbatim> Function to copy not more than n chars also can kinda cause seg fault </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="23" column="15" bodyfile="strcpy.cpp" bodystart="41" bodyend="55" declfile="protos.h" declline="23" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a4dc6f77e5a6731a3c4cca80a0ea6d9b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_smart_strcpy</definition>
+        <argsstring>(const char *from, char **to)</argsstring>
+        <name>my_smart_strcpy</name>
+        <param>
+          <type>const char *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Super smart strcpy
+\param from - pointer to a string to copy from
+\param to - pointer to a string to copy to
+\return OK - if successfully copied
+\return MEM_ERR - if some pointers are NULL
+\return OVERFL - if pc runs out of storage space
+</verbatim> Smart ctrcpy rellocates &quot;to&quot; string for it to fit exactly as many chars as &quot;from&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="25" column="15" bodyfile="strcpy.cpp" bodystart="67" bodyend="80" declfile="protos.h" declline="25" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1af3005e3df6fbf19089cfbad2aea69884" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_strcat</definition>
+        <argsstring>(const char *from, char **to)</argsstring>
+        <name>my_strcat</name>
+        <param>
+          <type>const char *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Concatenates strings
+\param from - string to concat
+\param to - ptr to string to concat to
+\return OK if allright
+\return MEM_ERR if one of ptrs is NULL
+\return OVERFL if pc is out of mem
+</verbatim> Concatenates two strings into the &quot;to&quot; one </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="27" column="15" bodyfile="strcat.cpp" bodystart="14" bodyend="32" declfile="protos.h" declline="27" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a706a9327e6ff3bfc775086bf1509fe8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_strncat</definition>
+        <argsstring>(const char *from, char **to, const unsigned int n)</argsstring>
+        <name>my_strncat</name>
+        <param>
+          <type>const char *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Concatenates two strings with limit
+\param from - string to concatenate from
+\param to - string to concatenate to
+\param n - max amount if symbols to concat from &quot;from&quot;
+\return OK - all fine
+\return MEM_ERR - one or more pts are NULL
+\return OVERFL - not enough memory
+</verbatim> Concats two strings, but adds not more then n symbols from &quot;from&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="29" column="15" bodyfile="strcat.cpp" bodystart="45" bodyend="63" declfile="protos.h" declline="29" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1acfb6838062d4b9eccc8c7db12539fa5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
+        <definition>action_status my_fgets</definition>
+        <argsstring>(char **to, FILE *stream)</argsstring>
+        <name>my_fgets</name>
+        <param>
+          <type>char **</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Gets string from input file
+\param to - string to read to
+\param stream - filestream to read rom
+\return OK - all fine
+\return MEM_ERR - one or more pts are NULL(ded)
+\return OVERFL - pc ran out of storage space (also erases everything from &quot;to&quot;)
+</verbatim> Reads string from file dynamically changing string&apos;s length may have a bit unefficient memory management </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="31" column="15" bodyfile="fgets.cpp" bodystart="14" bodyend="46" declfile="protos.h" declline="31" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1af36482ca227a1916a8a2f93ae01fe510" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* my_strdup</definition>
+        <argsstring>(const char *src)</argsstring>
+        <name>my_strdup</name>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Copies a string to heap
+\param src - string to copy
+\return ptr to an allocated memory
+</verbatim> Returns a pointer to a newly allocated memory that contains a copy of a string passed into it </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="33" column="6" bodyfile="strdup.cpp" bodystart="11" bodyend="28" declfile="protos.h" declline="33" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a2cc4cf5219af874ad19160df6458ea48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* my_strchr</definition>
+        <argsstring>(char *const src, const char ch)</argsstring>
+        <name>my_strchr</name>
+        <param>
+          <type>char *const</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>const char</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Finds a char
+\param src - string to search in
+\param ch - char to search for
+\return ptr to a char in string
+\return NULL if there is no char in string or no string
+</verbatim> Finds a set char in a set string and returns a ptr to char in the string </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="35" column="6" bodyfile="strchr.cpp" bodystart="13" bodyend="24" declfile="protos.h" declline="35" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -154,16 +420,35 @@
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref>{</highlight></codeline>
-<codeline lineno="9" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
-<codeline lineno="10" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref><sp/>=<sp/>-1,<sp/></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" kindref="member">OVERFL</ref><sp/><sp/>=<sp/>1<sp/><sp/></highlight></codeline>
-<codeline lineno="12" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" refkind="member"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a3f6b7b5f831029c14df24abeac1d57e8" kindref="member">my_fputs</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>out_str,<sp/>FILE*<sp/>stream);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af2f145304414f93f65d2035c25e76e86" kindref="member">my_strlen</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str);</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref>{</highlight></codeline>
+<codeline lineno="12" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
+<codeline lineno="13" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref><sp/>=<sp/>-1,<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" kindref="member">OVERFL</ref><sp/><sp/>=<sp/>1<sp/><sp/></highlight></codeline>
+<codeline lineno="15" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a3f6b7b5f831029c14df24abeac1d57e8" kindref="member">my_fputs</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>out_str,<sp/>FILE*<sp/>stream);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" kindref="member">my_strlen</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a72531846ab7d930fd1a509b0ad5851ad" kindref="member">my_strcpy</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>to);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a745e53545447dc16984bbb926b3356db" kindref="member">my_strncpy</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>to,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a4dc6f77e5a6731a3c4cca80a0ea6d9b0" kindref="member">my_smart_strcpy</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1af3005e3df6fbf19089cfbad2aea69884" kindref="member">my_strcat</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a706a9327e6ff3bfc775086bf1509fe8c" kindref="member">my_strncat</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1acfb6838062d4b9eccc8c7db12539fa5f" kindref="member">my_fgets</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to,<sp/>FILE*<sp/>stream);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="protos_8h_1af36482ca227a1916a8a2f93ae01fe510" kindref="member">my_strdup</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>src);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="protos_8h_1a2cc4cf5219af874ad19160df6458ea48" kindref="member">my_strchr</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>src,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch);</highlight></codeline>
     </programlisting>
     <location file="protos.h"/>
   </compounddef>
