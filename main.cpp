@@ -14,7 +14,7 @@ int main (int argc, char* argv[]) {
     }
 
     char* src = NULL;
-    my_smart_strcpy ("absc", &src);
-    char* val = my_strdup (src);
-    my_fputs (val, stdout);
+    my_smart_strcpy ("abcdefbd", &src);
+    char* ch = my_strchr (src, 'b');
+    my_fputs (ch, stdout);
 }

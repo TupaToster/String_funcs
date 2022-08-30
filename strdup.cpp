@@ -8,7 +8,7 @@
 Returns a pointer to a newly allocated memory that contains a copy of a string
 passed into it
 */
-char* my_strdup (char* src) {
+char* my_strdup (const char* src) {
 
     if (src == NULL) return NULL;
     

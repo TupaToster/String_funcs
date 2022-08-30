@@ -26,8 +26,10 @@ action_status my_smart_strcpy (const char* from, char** to);
 
 action_status my_strcat (const char* from, char** to);
 
-action_status my_strncat (const char* from, char** to, unsigned int n);
+action_status my_strncat (const char* from, char** to, const unsigned int n);
 
 action_status my_fgets (char** to, FILE* stream);
 
-char* my_strdup (char* from);
+char* my_strdup (const char* src);
+
+char* my_strchr (char* const src, const char ch);
