@@ -25,6 +25,10 @@ void unit_test () {
     ASRT (strcmp ("abc", a) == 0);
     ///< EOTest of fputs
 
+    fclose (test_io);
+    test_io = fopen ("utest", "w");
+    fclose (test_io);
+
     ///< Test of strcat
     strcpy (a, "abc");
     strcpy (b, "def");
@@ -48,6 +52,7 @@ void unit_test () {
 
     ///< Test of strdup
     strcpy (a, "abc");
+    ASRT (a != NULL);
     b = my_strdup (a);
     ASRT (b != NULL);
     ASRT (strcmp (b, "abc") == 0);
@@ -56,7 +61,7 @@ void unit_test () {
     ///< Test of strlen
     strcpy (a, "abc");
     ASRT (my_strlen (a) == 3);
-    ///< EOTest
+    ///< EOTest52
 
     ///< Test of strcpy
     strcpy (a, "abc");
@@ -66,8 +71,9 @@ void unit_test () {
 
     ///< Test of strncpy
     strcpy (a, "abc");
-    ASRT (my_strncpy (a, b, 2) == OK);
-    ASRT (strcmp (b, "ab"));
+    strcpy (b, "abc");
+    ASRT (my_strncpy (a, b, 2) == OVERFL);
+    ASRT (strcmp (b, "ab") == 0);
     ///< EOTest of strncpy
 
     ///< Test of smart_strcpy
@@ -75,10 +81,6 @@ void unit_test () {
     ASRT (my_smart_strcpy ("abc", &a) == OK);
     ASRT (strcmp (a, "abc") == 0);
     ///< EOTest of smart_strcpy
-
+       
     
-    fclose (test_io);
-    test_io = fopen ("utest", "w");
-    fclose (test_io);
-
 }

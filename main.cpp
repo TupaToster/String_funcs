@@ -16,17 +16,5 @@ int main (int argc, char* argv[]) {
         return 0;
     }
 
-    FILE* input = fopen ("onegin", "r");
-
-    char* lines[6000] = {0};
-    char* temp        = NULL;
-    int line_cnt      = 0;
-
-    for (int i = 0; i < 6000; i++) {
-        
-        if (fgets (temp, 100, input) == NULL) break;
-    }
-
     
-
 }
