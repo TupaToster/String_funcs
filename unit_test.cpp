@@ -81,6 +81,5 @@ void unit_test () {
     ASRT (my_smart_strcpy ("abc", &a) == OK);
     ASRT (strcmp (a, "abc") == 0);
     ///< EOTest of smart_strcpy
-       
     
 }

@@ -10,6 +10,7 @@
     <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
   <compound refid="protos_8h" kind="file"><name>protos.h</name>
+    <member refid="protos_8h_1a011ae48ddd36934a88e163cf739e1d7e" kind="define"><name>ASRT</name></member>
     <member refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kind="enum"><name>action_status</name></member>
     <member refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kind="enumvalue"><name>OK</name></member>
     <member refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kind="enumvalue"><name>MEM_ERR</name></member>
@@ -24,6 +25,7 @@
     <member refid="protos_8h_1acfb6838062d4b9eccc8c7db12539fa5f" kind="function"><name>my_fgets</name></member>
     <member refid="protos_8h_1af36482ca227a1916a8a2f93ae01fe510" kind="function"><name>my_strdup</name></member>
     <member refid="protos_8h_1a2cc4cf5219af874ad19160df6458ea48" kind="function"><name>my_strchr</name></member>
+    <member refid="protos_8h_1a8e55f3e436b0268b26875038536f8e53" kind="function"><name>unit_test</name></member>
   </compound>
   <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
   </compound>
@@ -44,6 +46,9 @@
   </compound>
   <compound refid="strlen_8cpp" kind="file"><name>strlen.cpp</name>
     <member refid="strlen_8cpp_1aba855dca0dac39e28eb5264dc3ec2049" kind="function"><name>my_strlen</name></member>
+  </compound>
+  <compound refid="unit__test_8cpp" kind="file"><name>unit_test.cpp</name>
+    <member refid="unit__test_8cpp_1a8e55f3e436b0268b26875038536f8e53" kind="function"><name>unit_test</name></member>
   </compound>
   <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
   </compound>

@@ -8,5 +8,6 @@ var files_dup =
     [ "strchr.cpp", "strchr_8cpp.html", "strchr_8cpp" ],
     [ "strcpy.cpp", "strcpy_8cpp.html", "strcpy_8cpp" ],
     [ "strdup.cpp", "strdup_8cpp.html", "strdup_8cpp" ],
-    [ "strlen.cpp", "strlen_8cpp.html", "strlen_8cpp" ]
+    [ "strlen.cpp", "strlen_8cpp.html", "strlen_8cpp" ],
+    [ "unit_test.cpp", "unit__test_8cpp.html", "unit__test_8cpp" ]
 ];

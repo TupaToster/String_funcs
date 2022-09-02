@@ -26,8 +26,6 @@
 \return MEM_ERR if one of ptrs is NULL
 \return OVERFL if pc is out of mem
 </computeroutput></literallayout> Concatenates two strings into the &quot;to&quot; one </para>
-<para>
-Definition at line 14 of file strcat.cpp.</para>
     </section><anchor xml:id="_strcat_8cpp_1a62d0e1313a3cbc6334c8d643356b66e4"/>    <section>
     <title>my_strncat()</title>
 <indexterm><primary>my_strncat</primary><secondary>strcat.cpp</secondary></indexterm>
@@ -41,8 +39,6 @@ Definition at line 14 of file strcat.cpp.</para>
 \return MEM_ERR - one or more pts are NULL
 \return OVERFL - not enough memory
 </computeroutput></literallayout> Concats two strings, but adds not more then n symbols from &quot;from&quot; </para>
-<para>
-Definition at line 45 of file strcat.cpp.</para>
 </section>
 </section>
 </section>

@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-
 //Uncomment line below in case of emergency
 //#include <bits\stdc++.h>
 

@@ -22,8 +22,6 @@
 \return -1 - if str is NULL
 \return anything &gt;=0 - string&apos;s len
 </computeroutput></literallayout> Calculates string length. Nothing more to say </para>
-<para>
-Definition at line 10 of file strlen.cpp.</para>
 </section>
 </section>
 </section>

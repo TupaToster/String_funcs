@@ -28,8 +28,6 @@
 \return MEM_ERR - if some pointers are NULL
 \return OVERFL - if pc runs out of storage space
 </computeroutput></literallayout> Smart ctrcpy rellocates &quot;to&quot; string for it to fit exactly as many chars as &quot;from&quot; </para>
-<para>
-Definition at line 67 of file strcpy.cpp.</para>
     </section><anchor xml:id="_strcpy_8cpp_1a72531846ab7d930fd1a509b0ad5851ad"/>    <section>
     <title>my_strcpy()</title>
 <indexterm><primary>my_strcpy</primary><secondary>strcpy.cpp</secondary></indexterm>
@@ -41,8 +39,6 @@ Definition at line 67 of file strcpy.cpp.</para>
 \return OK - if copied
 \return MEM_ERR - if one or more parameters are NULL
 </computeroutput></literallayout> Simple cstcpy function that does not care about any possible damage it may make It is trying hard not to cause any seg fault </para>
-<para>
-Definition at line 14 of file strcpy.cpp.</para>
     </section><anchor xml:id="_strcpy_8cpp_1a925a08a32744e62910b892013764ed83"/>    <section>
     <title>my_strncpy()</title>
 <indexterm><primary>my_strncpy</primary><secondary>strcpy.cpp</secondary></indexterm>
@@ -56,8 +52,6 @@ Definition at line 14 of file strcpy.cpp.</para>
 \return MEM_ERR if one or more ptrs 
 \return OVERFL if pc ran out of free mem
 </computeroutput></literallayout> Function to copy not more than n chars also can kinda cause seg fault </para>
-<para>
-Definition at line 41 of file strcpy.cpp.</para>
 </section>
 </section>
 </section>

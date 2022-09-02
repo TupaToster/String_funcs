@@ -24,8 +24,6 @@
 \return MEM_ERR - if one of parametres is NULL
 \return OVERFL - if it&apos;s impossible to put char into file
 </computeroutput></literallayout> Prints a string into a file and doesn&apos;t mind sizes of both, also can&apos;t abort program </para>
-<para>
-Definition at line 14 of file fputs.cpp.</para>
 </section>
 </section>
 </section>

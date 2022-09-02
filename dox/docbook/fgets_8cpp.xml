@@ -24,8 +24,6 @@
 \return MEM_ERR - one or more pts are NULL(ded)
 \return OVERFL - pc ran out of storage space (also erases everything from &quot;to&quot;)
 </computeroutput></literallayout> Reads string from file dynamically changing string&apos;s length may have a bit unefficient memory management </para>
-<para>
-Definition at line 14 of file fgets.cpp.</para>
 </section>
 </section>
 </section>

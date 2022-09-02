@@ -21,8 +21,6 @@
 \param src - string to copy
 \return ptr to an allocated memory
 </computeroutput></literallayout> Returns a pointer to a newly allocated memory that contains a copy of a string passed into it </para>
-<para>
-Definition at line 11 of file strdup.cpp.</para>
 </section>
 </section>
 </section>

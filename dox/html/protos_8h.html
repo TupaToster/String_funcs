@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('protos_8h.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -97,6 +98,11 @@ $(document).ready(function(){initNavTree('protos_8h.html',''); initResizable(); 
 </div>
 <p><a href="protos_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a011ae48ddd36934a88e163cf739e1d7e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a011ae48ddd36934a88e163cf739e1d7e">ASRT</a>(cnd)</td></tr>
+<tr class="separator:a011ae48ddd36934a88e163cf739e1d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:af617fb44a7c1958910a3e7a07b8b1d00"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#af617fb44a7c1958910a3e7a07b8b1d00">action_status</a> { <a class="el" href="protos_8h.html#af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a> = 0
@@ -127,7 +133,36 @@ Functions</h2></td></tr>
 <tr class="separator:af36482ca227a1916a8a2f93ae01fe510"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cc4cf5219af874ad19160df6458ea48"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a2cc4cf5219af874ad19160df6458ea48">my_strchr</a> (char *const src, const char ch)</td></tr>
 <tr class="separator:a2cc4cf5219af874ad19160df6458ea48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e55f3e436b0268b26875038536f8e53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a8e55f3e436b0268b26875038536f8e53">unit_test</a> ()</td></tr>
+<tr class="memdesc:a8e55f3e436b0268b26875038536f8e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests correctness of work of some functions.  <a href="protos_8h.html#a8e55f3e436b0268b26875038536f8e53">More...</a><br /></td></tr>
+<tr class="separator:a8e55f3e436b0268b26875038536f8e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a011ae48ddd36934a88e163cf739e1d7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a011ae48ddd36934a88e163cf739e1d7e">&#9670;&nbsp;</a></span>ASRT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASRT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cnd</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                    <span class="keywordflow">if</span>(!(cnd)) printf(<span class="stringliteral">&quot;\n&quot;</span>                   \</div>
+<div class="line">                                    <span class="stringliteral">&quot;Assertion failed: %s \n&quot;</span>\</div>
+<div class="line">                                    <span class="stringliteral">&quot;in file %s\n&quot;</span>           \</div>
+<div class="line">                                    <span class="stringliteral">&quot;function %s\n&quot;</span>          \</div>
+<div class="line">                                    <span class="stringliteral">&quot;line %d \n&quot;</span>,            \</div>
+<div class="line">                      #cnd, __FILE__, __PRETTY_FUNCTION__, __LINE__);</div>
+</div><!-- fragment --><p>Assert but without stopping the program </p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="af617fb44a7c1958910a3e7a07b8b1d00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af617fb44a7c1958910a3e7a07b8b1d00">&#9670;&nbsp;</a></span>action_status</h2>
@@ -487,6 +522,45 @@ Functions</h2></td></tr>
 \return MEM_ERR if one or more ptrs 
 \return OVERFL if pc ran out of free mem
 </pre><p> Function to copy not more than n chars also can kinda cause seg fault </p>
+
+</div>
+</div>
+<a id="a8e55f3e436b0268b26875038536f8e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e55f3e436b0268b26875038536f8e53">&#9670;&nbsp;</a></span>unit_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unit_test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tests correctness of work of some functions. </p>
+<p>&lt; Test of fgets</p>
+<p>&lt; EOTest of fgets</p>
+<p>&lt; Test of fputs</p>
+<p>&lt; EOTest of fputs</p>
+<p>&lt; Test of strcat</p>
+<p>&lt; EOTest of strcat</p>
+<p>&lt; Test of strncat</p>
+<p>&lt; EOTest of strncat</p>
+<p>&lt; Test of strchr</p>
+<p>&lt; EOTest of strchr</p>
+<p>&lt; Test of strdup</p>
+<p>&lt; EOTest of strdup</p>
+<p>&lt; Test of strlen</p>
+<p>&lt; EOTest52</p>
+<p>&lt; Test of strcpy</p>
+<p>&lt; EOTest of strcpy</p>
+<p>&lt; Test of strncpy</p>
+<p>&lt; EOTest of strncpy</p>
+<p>&lt; Test of smart_strcpy</p>
+<p>&lt; EOTest of smart_strcpy</p>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
-.TH "protos.h" 3 "Tue Aug 30 2022" "Version 2" "String functions" \" -*- nroff -*-
+.TH "protos.h" 3 "Thu Sep 1 2022" "Version 2" "String functions" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,6 +15,13 @@ protos.h
 \fC#include <assert\&.h>\fP
 .br
 
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBASRT\fP(cnd)"
+.br
+.in -1c
 .SS "Enumerations"
 
 .in +1c
@@ -55,7 +62,25 @@ protos.h
 .ti -1c
 .RI "char * \fBmy_strchr\fP (char *const src, const char ch)"
 .br
+.ti -1c
+.RI "void \fBunit_test\fP ()"
+.br
+.RI "Tests correctness of work of some functions\&. "
 .in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ASRT(cnd)"
+\fBValue:\fP
+.PP
+.nf
+                                    if(!(cnd)) printf("\n"                   \
+                                    "Assertion failed: %s \n"\
+                                    "in file %s\n"           \
+                                    "function %s\n"          \
+                                    "line %d \n",            \
+                      #cnd, __FILE__, __PRETTY_FUNCTION__, __LINE__);
+.fi
+Assert but without stopping the program 
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBaction_status\fP"
@@ -209,6 +234,48 @@ Overflow error, i\&.e\&. not enough memory\&.
 .fi
 .PP
  Function to copy not more than n chars also can kinda cause seg fault 
+.SS "void unit_test ()"
+
+.PP
+Tests correctness of work of some functions\&. < Test of fgets
+.PP
+< EOTest of fgets
+.PP
+< Test of fputs
+.PP
+< EOTest of fputs
+.PP
+< Test of strcat
+.PP
+< EOTest of strcat
+.PP
+< Test of strncat
+.PP
+< EOTest of strncat
+.PP
+< Test of strchr
+.PP
+< EOTest of strchr
+.PP
+< Test of strdup
+.PP
+< EOTest of strdup
+.PP
+< Test of strlen
+.PP
+< EOTest52
+.PP
+< Test of strcpy
+.PP
+< EOTest of strcpy
+.PP
+< Test of strncpy
+.PP
+< EOTest of strncpy
+.PP
+< Test of smart_strcpy
+.PP
+< EOTest of smart_strcpy
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for String functions from the source code\&.

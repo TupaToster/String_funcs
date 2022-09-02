@@ -23,8 +23,6 @@
 \return ptr to a char in string
 \return NULL if there is no char in string or no string
 </computeroutput></literallayout> Finds a set char in a set string and returns a ptr to char in the string </para>
-<para>
-Definition at line 13 of file strchr.cpp.</para>
 </section>
 </section>
 </section>
