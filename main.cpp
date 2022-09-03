@@ -1,21 +1,23 @@
 #include "protos.h"
 
-void my_merg (char** l, char** r) {
+void morgsort (char** l, char** r) {
 
-    //printf ("%s\n", *l);
-    if (r == l+1) return;
+    if (l == r) return;
+
     char** mid = l + (r - l) / 2;
     char** l_ptr = l;
     char** r_ptr = mid;
-    my_merg (l, mid);
-    my_merg (mid, r);
-    char** temp = (char**) calloc (r - l, sizeof(char*));
 
-    for (int i = 0;i < r - l; i++) {
+    morgsort (l, mid);
+    morgsort (mid+1, r);
 
-        if (l_ptr != mid) {
+    char** temp = (char**) calloc (r - l + 1, sizeof(char*));
 
-            if (r_ptr != r) {
+    for (int i = 0; i <= r - l; i++) {
+
+        if (l_ptr != mid + 1) {
+
+            if (r_ptr != r + 1) {
 
                 if (strcmp (*l_ptr, *r_ptr) < 0) {
 
@@ -35,19 +37,21 @@ void my_merg (char** l, char** r) {
             }
         }
         else {
-            
+
             temp[i] = *r_ptr;
             r_ptr++;
         }
     }
 
-    for (int i = 0; i < r - l; i++) {
-
-        *l = temp[i];
+    while (temp != r + 1) {
+        *l = *temp;
         l++;
+        temp++;
     }
-    return;
+
 }
+
+
 /*!
     \brief Will contain some ways to interact with functions
     \param argc - count of com line args
@@ -88,7 +92,7 @@ int main (int argc, char* argv[]) {
         while (lines[i][0] == '\t' or lines[i][0] == ' ') lines[i]++;
     }
 
-    my_merg (lines, lines + line_amount);
+    morgsort (lines, lines + line_amount - 1);
 
     for (unsigned int i = 0; i < line_amount; i++) {
 
