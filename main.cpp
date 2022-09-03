@@ -1,6 +1,53 @@
 #include "protos.h"
 
+void my_merg (char** l, char** r) {
 
+    //printf ("%s\n", *l);
+    if (r == l+1) return;
+    char** mid = l + (r - l) / 2;
+    char** l_ptr = l;
+    char** r_ptr = mid;
+    my_merg (l, mid);
+    my_merg (mid, r);
+    char** temp = (char**) calloc (r - l, sizeof(char*));
+
+    for (int i = 0;i < r - l; i++) {
+
+        if (l_ptr != mid) {
+
+            if (r_ptr != r) {
+
+                if (strcmp (*l_ptr, *r_ptr) < 0) {
+
+                    temp[i] = *l_ptr;
+                    l_ptr++;
+                }
+                else {
+
+                    temp[i] = *r_ptr;
+                    r_ptr++;
+                }
+            }
+            else {
+
+                temp[i] = *l_ptr;
+                l_ptr++;
+            }
+        }
+        else {
+            
+            temp[i] = *r_ptr;
+            r_ptr++;
+        }
+    }
+
+    for (int i = 0; i < r - l; i++) {
+
+        *l = temp[i];
+        l++;
+    }
+    return;
+}
 /*!
     \brief Will contain some ways to interact with functions
     \param argc - count of com line args
@@ -20,7 +67,7 @@ int main (int argc, char* argv[]) {
         return 0;
     }
 
-    FILE* onegin = fopen ("onegin", "r"), 
+    FILE* onegin = fopen ("qtest", "r"), 
         * out    = fopen ("out", "w");
 
     char** lines = NULL;
@@ -41,9 +88,11 @@ int main (int argc, char* argv[]) {
         while (lines[i][0] == '\t' or lines[i][0] == ' ') lines[i]++;
     }
 
+    my_merg (lines, lines + line_amount);
+
     for (unsigned int i = 0; i < line_amount; i++) {
 
-        fputs (lines[i], out);
+        fputs (lines[i], stdout);
     }
 
 }
