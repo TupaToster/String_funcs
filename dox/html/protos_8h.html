@@ -136,6 +136,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a8e55f3e436b0268b26875038536f8e53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a8e55f3e436b0268b26875038536f8e53">unit_test</a> ()</td></tr>
 <tr class="memdesc:a8e55f3e436b0268b26875038536f8e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests correctness of work of some functions.  <a href="protos_8h.html#a8e55f3e436b0268b26875038536f8e53">More...</a><br /></td></tr>
 <tr class="separator:a8e55f3e436b0268b26875038536f8e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5d13dcc4dc3b40b86ac73c5526e30a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a2c5d13dcc4dc3b40b86ac73c5526e30a">mergesort_str</a> (char **l, char **r)</td></tr>
+<tr class="memdesc:a2c5d13dcc4dc3b40b86ac73c5526e30a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to interact with mergesort_str_inside. Look for docs there.  <a href="protos_8h.html#a2c5d13dcc4dc3b40b86ac73c5526e30a">More...</a><br /></td></tr>
+<tr class="separator:a2c5d13dcc4dc3b40b86ac73c5526e30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1d71de59c94f2b07a3462fd64c5065"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a2f1d71de59c94f2b07a3462fd64c5065">mergesort_str_inside</a> (char **l, char **r, char **temp)</td></tr>
+<tr class="separator:a2f1d71de59c94f2b07a3462fd64c5065"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a011ae48ddd36934a88e163cf739e1d7e"></a>
@@ -188,6 +193,75 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a2c5d13dcc4dc3b40b86ac73c5526e30a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c5d13dcc4dc3b40b86ac73c5526e30a">&#9670;&nbsp;</a></span>mergesort_str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mergesort_str </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interface to interact with mergesort_str_inside. Look for docs there. </p>
+
+</div>
+</div>
+<a id="a2f1d71de59c94f2b07a3462fd64c5065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f1d71de59c94f2b07a3462fd64c5065">&#9670;&nbsp;</a></span>mergesort_str_inside()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mergesort_str_inside </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>temp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">\brief Sorts an array of strings in right order
+\param l - pointer to the beginning of an array
+\param r - pointer to the element right after an array end
+\param temp - temporary array used for merging
+</pre><p> Mergesorts through a c-string array tries not to eat memory but is bad at it also fast somehow </p>
+
+</div>
+</div>
 <a id="acfb6838062d4b9eccc8c7db12539fa5f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acfb6838062d4b9eccc8c7db12539fa5f">&#9670;&nbsp;</a></span>my_fgets()</h2>
 

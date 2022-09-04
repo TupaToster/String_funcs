@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
+
+
 //Uncomment line below in case of emergency
 //#include <bits\stdc++.h>
 
@@ -47,3 +49,7 @@ char* my_strdup (const char* src);
 char* my_strchr (char* const src, const char ch);
 
 void unit_test ();
+
+void mergesort_str (char** l, char** r);
+
+void mergesort_str_inside (char** l, char** r, char** temp);

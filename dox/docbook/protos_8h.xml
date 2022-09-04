@@ -50,6 +50,12 @@
 
 <para>Tests correctness of work of some functions. </para>
 </listitem>
+            <listitem><para>void <link linkend="_protos_8h_1a2c5d13dcc4dc3b40b86ac73c5526e30a">mergesort_str</link> (char **l, char **r)</para>
+
+<para>Interface to interact with mergesort_str_inside. Look for docs there. </para>
+</listitem>
+            <listitem><para>void <link linkend="_protos_8h_1a2f1d71de59c94f2b07a3462fd64c5065">mergesort_str_inside</link> (char **l, char **r, char **temp)</para>
+</listitem>
         </itemizedlist>
 </simplesect>
 <section>
@@ -101,7 +107,25 @@
 </section>
 <section>
 <title>Function Documentation</title>
-<anchor xml:id="_protos_8h_1acfb6838062d4b9eccc8c7db12539fa5f"/>    <section>
+<anchor xml:id="_protos_8h_1a2c5d13dcc4dc3b40b86ac73c5526e30a"/>    <section>
+    <title>mergesort_str()</title>
+<indexterm><primary>mergesort_str</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>mergesort_str</secondary></indexterm>
+<para><computeroutput>void mergesort_str (char ** l, char ** r)</computeroutput></para><para>
+
+<para>Interface to interact with mergesort_str_inside. Look for docs there. </para>
+</para>
+    </section><anchor xml:id="_protos_8h_1a2f1d71de59c94f2b07a3462fd64c5065"/>    <section>
+    <title>mergesort_str_inside()</title>
+<indexterm><primary>mergesort_str_inside</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>mergesort_str_inside</secondary></indexterm>
+<para><computeroutput>void mergesort_str_inside (char ** l, char ** r, char ** temp)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Sorts an array of strings in right order
+\param l - pointer to the beginning of an array
+\param r - pointer to the element right after an array end
+\param temp - temporary array used for merging
+</computeroutput></literallayout> Mergesorts through a c-string array tries not to eat memory but is bad at it also fast somehow </para>
+    </section><anchor xml:id="_protos_8h_1acfb6838062d4b9eccc8c7db12539fa5f"/>    <section>
     <title>my_fgets()</title>
 <indexterm><primary>my_fgets</primary><secondary>protos.h</secondary></indexterm>
 <indexterm><primary>protos.h</primary><secondary>my_fgets</secondary></indexterm>

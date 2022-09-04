@@ -41,7 +41,11 @@ char $\ast$ \mbox{\hyperlink{protos_8h_af36482ca227a1916a8a2f93ae01fe510}{my\+\_
 char $\ast$ \mbox{\hyperlink{protos_8h_a2cc4cf5219af874ad19160df6458ea48}{my\+\_\+strchr}} (char $\ast$const src, const char ch)
 \item 
 void \mbox{\hyperlink{protos_8h_a8e55f3e436b0268b26875038536f8e53}{unit\+\_\+test}} ()
-\begin{DoxyCompactList}\small\item\em Tests correctness of work of some functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Tests correctness of work of some functions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{protos_8h_a2c5d13dcc4dc3b40b86ac73c5526e30a}{mergesort\+\_\+str}} (char $\ast$$\ast$l, char $\ast$$\ast$r)
+\begin{DoxyCompactList}\small\item\em Interface to interact with mergesort\+\_\+str\+\_\+inside. Look for docs there. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{protos_8h_a2f1d71de59c94f2b07a3462fd64c5065}{mergesort\+\_\+str\+\_\+inside}} (char $\ast$$\ast$l, char $\ast$$\ast$r, char $\ast$$\ast$temp)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -87,7 +91,28 @@ OVERFL&Overflow error, i.\+e. not enough memory. \\
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{protos_8h_acfb6838062d4b9eccc8c7db12539fa5f}\label{protos_8h_acfb6838062d4b9eccc8c7db12539fa5f}} 
+\mbox{\Hypertarget{protos_8h_a2c5d13dcc4dc3b40b86ac73c5526e30a}\label{protos_8h_a2c5d13dcc4dc3b40b86ac73c5526e30a}} 
+\index{protos.h@{protos.h}!mergesort\_str@{mergesort\_str}}
+\index{mergesort\_str@{mergesort\_str}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{mergesort\_str()}{mergesort\_str()}}
+{\footnotesize\ttfamily void mergesort\+\_\+str (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{l,  }\item[{char $\ast$$\ast$}]{r }\end{DoxyParamCaption})}
+
+
+
+Interface to interact with mergesort\+\_\+str\+\_\+inside. Look for docs there. 
+
+\mbox{\Hypertarget{protos_8h_a2f1d71de59c94f2b07a3462fd64c5065}\label{protos_8h_a2f1d71de59c94f2b07a3462fd64c5065}} 
+\index{protos.h@{protos.h}!mergesort\_str\_inside@{mergesort\_str\_inside}}
+\index{mergesort\_str\_inside@{mergesort\_str\_inside}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{mergesort\_str\_inside()}{mergesort\_str\_inside()}}
+{\footnotesize\ttfamily void mergesort\+\_\+str\+\_\+inside (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{l,  }\item[{char $\ast$$\ast$}]{r,  }\item[{char $\ast$$\ast$}]{temp }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Sorts an array of strings in right order
+\param l - pointer to the beginning of an array
+\param r - pointer to the element right after an array end
+\param temp - temporary array used for merging
+\end{DoxyVerb}
+ Mergesorts through a c-\/string array tries not to eat memory but is bad at it also fast somehow \mbox{\Hypertarget{protos_8h_acfb6838062d4b9eccc8c7db12539fa5f}\label{protos_8h_acfb6838062d4b9eccc8c7db12539fa5f}} 
 \index{protos.h@{protos.h}!my\_fgets@{my\_fgets}}
 \index{my\_fgets@{my\_fgets}!protos.h@{protos.h}}
 \doxysubsubsection{\texorpdfstring{my\_fgets()}{my\_fgets()}}

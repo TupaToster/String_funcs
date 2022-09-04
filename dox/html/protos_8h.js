@@ -6,6 +6,8 @@ var protos_8h =
       [ "MEM_ERR", "protos_8h.html#af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e", null ],
       [ "OVERFL", "protos_8h.html#af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11", null ]
     ] ],
+    [ "mergesort_str", "protos_8h.html#a2c5d13dcc4dc3b40b86ac73c5526e30a", null ],
+    [ "mergesort_str_inside", "protos_8h.html#a2f1d71de59c94f2b07a3462fd64c5065", null ],
     [ "my_fgets", "protos_8h.html#acfb6838062d4b9eccc8c7db12539fa5f", null ],
     [ "my_fputs", "protos_8h.html#a3f6b7b5f831029c14df24abeac1d57e8", null ],
     [ "my_smart_strcpy", "protos_8h.html#a4dc6f77e5a6731a3c4cca80a0ea6d9b0", null ],

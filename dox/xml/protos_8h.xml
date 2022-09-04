@@ -9,6 +9,7 @@
     <includedby refid="fgets_8cpp" local="yes">fgets.cpp</includedby>
     <includedby refid="fputs_8cpp" local="yes">fputs.cpp</includedby>
     <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="sorter_8cpp" local="yes">sorter.cpp</includedby>
     <includedby refid="strcat_8cpp" local="yes">strcat.cpp</includedby>
     <includedby refid="strchr_8cpp" local="yes">strchr.cpp</includedby>
     <includedby refid="strcpy_8cpp" local="yes">strcpy.cpp</includedby>
@@ -42,7 +43,7 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="9">
+      <node id="10">
         <label>strlen.cpp</label>
         <link refid="strlen_8cpp"/>
       </node>
@@ -71,20 +72,26 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>fputs.cpp</label>
         <link refid="fputs_8cpp"/>
       </node>
       <node id="5">
+        <label>sorter.cpp</label>
+        <link refid="sorter_8cpp"/>
+      </node>
+      <node id="6">
         <label>strcat.cpp</label>
         <link refid="strcat_8cpp"/>
       </node>
-      <node id="8">
+      <node id="9">
         <label>strdup.cpp</label>
         <link refid="strdup_8cpp"/>
       </node>
-      <node id="10">
+      <node id="11">
         <label>unit_test.cpp</label>
         <link refid="unit__test_8cpp"/>
       </node>
@@ -92,11 +99,11 @@
         <label>fgets.cpp</label>
         <link refid="fgets_8cpp"/>
       </node>
-      <node id="6">
+      <node id="7">
         <label>strchr.cpp</label>
         <link refid="strchr_8cpp"/>
       </node>
-      <node id="7">
+      <node id="8">
         <label>strcpy.cpp</label>
         <link refid="strcpy_8cpp"/>
       </node>
@@ -118,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="23" column="9" bodyfile="protos.h" bodystart="23" bodyend="-1"/>
+        <location file="protos.h" line="24" column="9" bodyfile="protos.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -159,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="14" column="1" bodyfile="protos.h" bodystart="14" bodyend="18"/>
+        <location file="protos.h" line="15" column="1" bodyfile="protos.h" bodystart="15" bodyend="19"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -189,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="30" column="15" bodyfile="fputs.cpp" bodystart="14" bodyend="24" declfile="protos.h" declline="30" declcolumn="15"/>
+        <location file="protos.h" line="31" column="15" bodyfile="fputs.cpp" bodystart="14" bodyend="24" declfile="protos.h" declline="31" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -211,7 +218,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="32" column="14" bodyfile="strlen.cpp" bodystart="10" bodyend="18" declfile="protos.h" declline="32" declcolumn="14"/>
+        <location file="protos.h" line="33" column="14" bodyfile="strlen.cpp" bodystart="10" bodyend="18" declfile="protos.h" declline="33" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1a72531846ab7d930fd1a509b0ad5851ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
@@ -238,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="34" column="15" bodyfile="strcpy.cpp" bodystart="14" bodyend="27" declfile="protos.h" declline="34" declcolumn="15"/>
+        <location file="protos.h" line="35" column="15" bodyfile="strcpy.cpp" bodystart="14" bodyend="27" declfile="protos.h" declline="35" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1a745e53545447dc16984bbb926b3356db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
@@ -271,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="36" column="15" bodyfile="strcpy.cpp" bodystart="41" bodyend="55" declfile="protos.h" declline="36" declcolumn="15"/>
+        <location file="protos.h" line="37" column="15" bodyfile="strcpy.cpp" bodystart="41" bodyend="55" declfile="protos.h" declline="37" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1a4dc6f77e5a6731a3c4cca80a0ea6d9b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
@@ -299,7 +306,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="38" column="15" bodyfile="strcpy.cpp" bodystart="67" bodyend="80" declfile="protos.h" declline="38" declcolumn="15"/>
+        <location file="protos.h" line="39" column="15" bodyfile="strcpy.cpp" bodystart="67" bodyend="80" declfile="protos.h" declline="39" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1af3005e3df6fbf19089cfbad2aea69884" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
@@ -327,7 +334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="40" column="15" bodyfile="strcat.cpp" bodystart="14" bodyend="32" declfile="protos.h" declline="40" declcolumn="15"/>
+        <location file="protos.h" line="41" column="15" bodyfile="strcat.cpp" bodystart="14" bodyend="32" declfile="protos.h" declline="41" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1a706a9327e6ff3bfc775086bf1509fe8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
@@ -360,7 +367,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="42" column="15" bodyfile="strcat.cpp" bodystart="45" bodyend="63" declfile="protos.h" declline="42" declcolumn="15"/>
+        <location file="protos.h" line="43" column="15" bodyfile="strcat.cpp" bodystart="45" bodyend="63" declfile="protos.h" declline="43" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1acfb6838062d4b9eccc8c7db12539fa5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref></type>
@@ -388,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="44" column="15" bodyfile="fgets.cpp" bodystart="14" bodyend="57" declfile="protos.h" declline="44" declcolumn="15"/>
+        <location file="protos.h" line="45" column="15" bodyfile="fgets.cpp" bodystart="14" bodyend="57" declfile="protos.h" declline="45" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1af36482ca227a1916a8a2f93ae01fe510" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char *</type>
@@ -409,7 +416,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="46" column="6" bodyfile="strdup.cpp" bodystart="11" bodyend="29" declfile="protos.h" declline="46" declcolumn="6"/>
+        <location file="protos.h" line="47" column="6" bodyfile="strdup.cpp" bodystart="11" bodyend="29" declfile="protos.h" declline="47" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1a2cc4cf5219af874ad19160df6458ea48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char *</type>
@@ -436,7 +443,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="48" column="6" bodyfile="strchr.cpp" bodystart="13" bodyend="24" declfile="protos.h" declline="48" declcolumn="6"/>
+        <location file="protos.h" line="49" column="6" bodyfile="strchr.cpp" bodystart="13" bodyend="24" declfile="protos.h" declline="49" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1a8e55f3e436b0268b26875038536f8e53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -470,7 +477,59 @@
 <para>&lt; Test of smart_strcpy</para>
 <para>&lt; EOTest of smart_strcpy</para>
         </inbodydescription>
-        <location file="protos.h" line="50" column="6" bodyfile="unit_test.cpp" bodystart="6" bodyend="85" declfile="protos.h" declline="50" declcolumn="6"/>
+        <location file="protos.h" line="51" column="6" bodyfile="unit_test.cpp" bodystart="6" bodyend="85" declfile="protos.h" declline="51" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a2c5d13dcc4dc3b40b86ac73c5526e30a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mergesort_str</definition>
+        <argsstring>(char **l, char **r)</argsstring>
+        <name>mergesort_str</name>
+        <param>
+          <type>char **</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Interface to interact with mergesort_str_inside. Look for docs there. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="53" column="6" bodyfile="sorter.cpp" bodystart="6" bodyend="12" declfile="protos.h" declline="53" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a2f1d71de59c94f2b07a3462fd64c5065" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mergesort_str_inside</definition>
+        <argsstring>(char **l, char **r, char **temp)</argsstring>
+        <name>mergesort_str_inside</name>
+        <param>
+          <type>char **</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Sorts an array of strings in right order
+\param l - pointer to the beginning of an array
+\param r - pointer to the element right after an array end
+\param temp - temporary array used for merging
+</verbatim> Mergesorts through a c-string array tries not to eat memory but is bad at it also fast somehow </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="55" column="6" bodyfile="sorter.cpp" bodystart="24" bodyend="71" declfile="protos.h" declline="55" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -483,45 +542,50 @@
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//Uncomment<sp/>line<sp/>below<sp/>in<sp/>case<sp/>of<sp/>emergency</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;bits\stdc++.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//Uncomment<sp/>line<sp/>below<sp/>in<sp/>case<sp/>of<sp/>emergency</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;bits\stdc++.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref>{</highlight></codeline>
-<codeline lineno="15" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
-<codeline lineno="16" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref><sp/>=<sp/>-1,<sp/></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" kindref="member">OVERFL</ref><sp/><sp/>=<sp/>1<sp/><sp/></highlight></codeline>
-<codeline lineno="18" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" refkind="member"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="protos_8h_1a011ae48ddd36934a88e163cf739e1d7e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASRT(cnd)<sp/>if(!(cnd))<sp/>printf(&quot;\n&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Assertion<sp/>failed:<sp/>%s<sp/>\n&quot;\</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;in<sp/>file<sp/>%s\n&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;function<sp/>%s\n&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;line<sp/>%d<sp/>\n&quot;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#cnd,<sp/>__FILE__,<sp/>__PRETTY_FUNCTION__,<sp/>__LINE__);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a3f6b7b5f831029c14df24abeac1d57e8" kindref="member">my_fputs</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>out_str,<sp/>FILE*<sp/>stream);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" kindref="member">my_strlen</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a72531846ab7d930fd1a509b0ad5851ad" kindref="member">my_strcpy</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>to);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a745e53545447dc16984bbb926b3356db" kindref="member">my_strncpy</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>to,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a4dc6f77e5a6731a3c4cca80a0ea6d9b0" kindref="member">my_smart_strcpy</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1af3005e3df6fbf19089cfbad2aea69884" kindref="member">my_strcat</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a706a9327e6ff3bfc775086bf1509fe8c" kindref="member">my_strncat</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1acfb6838062d4b9eccc8c7db12539fa5f" kindref="member">my_fgets</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to,<sp/>FILE*<sp/>stream);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="protos_8h_1af36482ca227a1916a8a2f93ae01fe510" kindref="member">my_strdup</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>src);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="protos_8h_1a2cc4cf5219af874ad19160df6458ea48" kindref="member">my_strchr</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>src,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1a8e55f3e436b0268b26875038536f8e53" kindref="member">unit_test</ref><sp/>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref>{</highlight></codeline>
+<codeline lineno="16" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
+<codeline lineno="17" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref><sp/>=<sp/>-1,<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" kindref="member">OVERFL</ref><sp/><sp/>=<sp/>1<sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00a051d0e90144d67549b6bd28b8bc76a11" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="protos_8h_1a011ae48ddd36934a88e163cf739e1d7e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASRT(cnd)<sp/>if(!(cnd))<sp/>printf(&quot;\n&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Assertion<sp/>failed:<sp/>%s<sp/>\n&quot;\</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;in<sp/>file<sp/>%s\n&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;function<sp/>%s\n&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;line<sp/>%d<sp/>\n&quot;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#cnd,<sp/>__FILE__,<sp/>__PRETTY_FUNCTION__,<sp/>__LINE__);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a3f6b7b5f831029c14df24abeac1d57e8" kindref="member">my_fputs</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>out_str,<sp/>FILE*<sp/>stream);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1aba855dca0dac39e28eb5264dc3ec2049" kindref="member">my_strlen</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a72531846ab7d930fd1a509b0ad5851ad" kindref="member">my_strcpy</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>to);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a745e53545447dc16984bbb926b3356db" kindref="member">my_strncpy</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>to,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a4dc6f77e5a6731a3c4cca80a0ea6d9b0" kindref="member">my_smart_strcpy</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1af3005e3df6fbf19089cfbad2aea69884" kindref="member">my_strcat</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1a706a9327e6ff3bfc775086bf1509fe8c" kindref="member">my_strncat</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="protos_8h_1af617fb44a7c1958910a3e7a07b8b1d00" kindref="member">action_status</ref><sp/><ref refid="protos_8h_1acfb6838062d4b9eccc8c7db12539fa5f" kindref="member">my_fgets</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>to,<sp/>FILE*<sp/>stream);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="protos_8h_1af36482ca227a1916a8a2f93ae01fe510" kindref="member">my_strdup</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>src);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="protos_8h_1a2cc4cf5219af874ad19160df6458ea48" kindref="member">my_strchr</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>src,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1a8e55f3e436b0268b26875038536f8e53" kindref="member">unit_test</ref><sp/>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1a2c5d13dcc4dc3b40b86ac73c5526e30a" kindref="member">mergesort_str</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>l,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>r);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1a2f1d71de59c94f2b07a3462fd64c5065" kindref="member">mergesort_str_inside</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>l,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>r,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>temp);</highlight></codeline>
     </programlisting>
     <location file="protos.h"/>
   </compounddef>

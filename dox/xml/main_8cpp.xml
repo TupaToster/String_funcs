@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="main.cpp" line="16" column="5" bodyfile="main.cpp" bodystart="16" bodyend="51"/>
+        <location file="main.cpp" line="15" column="5" bodyfile="main.cpp" bodystart="15" bodyend="54"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,43 +72,46 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])<sp/>{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>&gt;<sp/>1<sp/>and<sp/>strcmp<sp/>(argv[1],<sp/></highlight><highlight class="stringliteral">&quot;--test&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a8e55f3e436b0268b26875038536f8e53" kindref="member">unit_test</ref><sp/>();</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>oneg<sp/>=<sp/>fopen<sp/>(</highlight><highlight class="stringliteral">&quot;onegin&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>lines[5500]<sp/>=<sp/>{NULL};</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>temp<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc<sp/>(101);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>&gt;<sp/>1<sp/>and<sp/>strcmp<sp/>(argv[1],<sp/></highlight><highlight class="stringliteral">&quot;--test&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a8e55f3e436b0268b26875038536f8e53" kindref="member">unit_test</ref><sp/>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>onegin<sp/>=<sp/>fopen<sp/>(</highlight><highlight class="stringliteral">&quot;onegin&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(onegin<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>out<sp/><sp/><sp/><sp/>=<sp/>fopen<sp/>(</highlight><highlight class="stringliteral">&quot;out&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(out<sp/><sp/><sp/><sp/>!=<sp/>NULL);<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>5500;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fgets<sp/>(temp,<sp/>100,<sp/>oneg)<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//strcat<sp/>(temp,<sp/>&quot;\n&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lines[i]<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc<sp/>(strlen<sp/>(temp));</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy<sp/>(lines[i],<sp/>temp);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>5500<sp/>and<sp/>lines[i]<sp/>!=<sp/>NULL;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line_cnt<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>temp<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc<sp/>(200);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(temp<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(fgets<sp/>(temp,<sp/>199,<sp/>onegin)<sp/>!=<sp/>NULL)<sp/>line_cnt++;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>fseek<sp/>(onegin,<sp/>SEEK_SET,<sp/>0);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>lines<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**)<sp/>calloc<sp/>(line_cnt<sp/>+<sp/>1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>lines[line_cnt]<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc<sp/>(20);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy<sp/>(lines[line_cnt],<sp/></highlight><highlight class="stringliteral">&quot;end<sp/>of<sp/>lol<sp/>man&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;<sp/>5500<sp/>and<sp/>lines[j]<sp/>!=<sp/>NULL;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>line_cnt;<sp/>i++)<sp/>{</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp<sp/>(lines[j],<sp/>lines[j-1])<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>lines[j];</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lines[j]<sp/>=<sp/>lines[j-1];</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lines[j-1]<sp/>=<sp/>temp;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>5500<sp/>and<sp/>lines[i]<sp/>!=<sp/>NULL;<sp/>i++)<sp/>printf(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>lines[i]);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>fgets<sp/>(temp,<sp/>199,<sp/>onegin);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert<sp/>(temp<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lines[i]<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc<sp/>(strlen<sp/>(temp)<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy<sp/>(lines[i],<sp/>temp);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a2c5d13dcc4dc3b40b86ac73c5526e30a" kindref="member">mergesort_str</ref><sp/>(lines,<sp/>lines<sp/>+<sp/>line_cnt);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>line_cnt;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fputs<sp/>(lines[i],<sp/>out);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="main.cpp"/>
   </compounddef>

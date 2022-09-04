@@ -1,57 +1,5 @@
 #include "protos.h"
 
-void morgsort (char** l, char** r) {
-
-    if (l == r) return;
-
-    char** mid = l + (r - l) / 2;
-    char** l_ptr = l;
-    char** r_ptr = mid;
-
-    morgsort (l, mid);
-    morgsort (mid+1, r);
-
-    char** temp = (char**) calloc (r - l + 1, sizeof(char*));
-
-    for (int i = 0; i <= r - l; i++) {
-
-        if (l_ptr != mid + 1) {
-
-            if (r_ptr != r + 1) {
-
-                if (strcmp (*l_ptr, *r_ptr) < 0) {
-
-                    temp[i] = *l_ptr;
-                    l_ptr++;
-                }
-                else {
-
-                    temp[i] = *r_ptr;
-                    r_ptr++;
-                }
-            }
-            else {
-
-                temp[i] = *l_ptr;
-                l_ptr++;
-            }
-        }
-        else {
-
-            temp[i] = *r_ptr;
-            r_ptr++;
-        }
-    }
-
-    while (temp != r + 1) {
-        *l = *temp;
-        l++;
-        temp++;
-    }
-
-}
-
-
 /*!
     \brief Will contain some ways to interact with functions
     \param argc - count of com line args
@@ -71,32 +19,36 @@ int main (int argc, char* argv[]) {
         return 0;
     }
 
-    FILE* onegin = fopen ("qtest", "r"), 
-        * out    = fopen ("out", "w");
+    FILE* onegin = fopen ("onegin", "r");
+    assert (onegin != NULL);
+    FILE* out    = fopen ("out", "w");
+    assert (out    != NULL);    
 
-    char** lines = NULL;
-    char* temp = (char*) calloc (201, 1);
-    unsigned int line_amount = 0;
-
-    while (fgets (temp, 200, onegin) != NULL) line_amount++;
-
-    lines = (char**) calloc (line_amount, sizeof (char*));
+    unsigned int line_cnt = 0;
+    char* temp = (char*) malloc (200);
+    assert (temp != NULL);
+    
+    while (fgets (temp, 199, onegin) != NULL) line_cnt++;
 
     fseek (onegin, SEEK_SET, 0);
 
-    for (unsigned int i = 0; i < line_amount; i++) {
+    char** lines = (char**) calloc (line_cnt + 1, sizeof (char*));
+    lines[line_cnt] = (char*) malloc (20);
+    strcpy (lines[line_cnt], "end of lol man");
 
-        assert (fgets (temp, 200, onegin) != NULL);
-        lines[i] = (char*) malloc (strlen(temp) + 1);
+    for (unsigned int i = 0; i < line_cnt; i++) {
+
+        temp = fgets (temp, 199, onegin);
+        assert (temp != NULL);
+        lines[i] = (char*) malloc (strlen (temp) + 1);
         strcpy (lines[i], temp);
-        while (lines[i][0] == '\t' or lines[i][0] == ' ') lines[i]++;
     }
 
-    morgsort (lines, lines + line_amount - 1);
+    mergesort_str (lines, lines + line_cnt);
 
-    for (unsigned int i = 0; i < line_amount; i++) {
+    for (unsigned int i = 0; i < line_cnt; i++) {
 
-        fputs (lines[i], stdout);
+        fputs (lines[i], out);
     }
-
+     
 }

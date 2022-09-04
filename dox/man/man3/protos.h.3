@@ -1,4 +1,4 @@
-.TH "protos.h" 3 "Thu Sep 1 2022" "Version 2" "String functions" \" -*- nroff -*-
+.TH "protos.h" 3 "Sun Sep 4 2022" "Version 2" "String functions" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -66,6 +66,13 @@ protos.h
 .RI "void \fBunit_test\fP ()"
 .br
 .RI "Tests correctness of work of some functions\&. "
+.ti -1c
+.RI "void \fBmergesort_str\fP (char **l, char **r)"
+.br
+.RI "Interface to interact with mergesort_str_inside\&. Look for docs there\&. "
+.ti -1c
+.RI "void \fBmergesort_str_inside\fP (char **l, char **r, char **temp)"
+.br
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
@@ -73,7 +80,7 @@ protos.h
 \fBValue:\fP
 .PP
 .nf
-                                    if(!(cnd)) printf("\n"                   \
+                                  if(!(cnd)) printf("\n"                   \
                                     "Assertion failed: %s \n"\
                                     "in file %s\n"           \
                                     "function %s\n"          \
@@ -99,6 +106,22 @@ Memory error, i\&.e\&. something wrong with pointers\&.
 Overflow error, i\&.e\&. not enough memory\&. 
 .SH "Function Documentation"
 .PP 
+.SS "void mergesort_str (char ** l, char ** r)"
+
+.PP
+Interface to interact with mergesort_str_inside\&. Look for docs there\&. 
+.SS "void mergesort_str_inside (char ** l, char ** r, char ** temp)"
+
+.PP
+.nf
+\brief Sorts an array of strings in right order
+\param l - pointer to the beginning of an array
+\param r - pointer to the element right after an array end
+\param temp - temporary array used for merging
+
+.fi
+.PP
+ Mergesorts through a c-string array tries not to eat memory but is bad at it also fast somehow 
 .SS "\fBaction_status\fP my_fgets (char ** to, FILE * stream)"
 
 .PP

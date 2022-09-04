@@ -4,6 +4,7 @@ var files_dup =
     [ "fputs.cpp", "fputs_8cpp.html", "fputs_8cpp" ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "protos.h", "protos_8h.html", "protos_8h" ],
+    [ "sorter.cpp", "sorter_8cpp.html", "sorter_8cpp" ],
     [ "strcat.cpp", "strcat_8cpp.html", "strcat_8cpp" ],
     [ "strchr.cpp", "strchr_8cpp.html", "strchr_8cpp" ],
     [ "strcpy.cpp", "strcpy_8cpp.html", "strcpy_8cpp" ],
